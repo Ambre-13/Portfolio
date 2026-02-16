@@ -10,6 +10,48 @@ window.addEventListener('mousemove', (e)=>{
 // Simple progressive enhancement: add class when JS enabled
 document.documentElement.classList.add('js-enabled');
 
+// Gestion des menus déroulants sur mobile
+function initMobileDropdowns() {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  
+  dropdowns.forEach(dropdown => {
+    const dropbtn = dropdown.querySelector('.dropbtn');
+    
+    if (dropbtn) {
+      dropbtn.addEventListener('click', function(e) {
+        // Sur mobile uniquement (largeur < 768px)
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+          
+          // Fermer tous les autres dropdowns
+          dropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+          
+          // Toggle le dropdown actuel
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
+  
+  // Fermer les dropdowns quand on clique ailleurs
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth < 768) {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    }
+  });
+}
+
+// Initialiser au chargement
+document.addEventListener('DOMContentLoaded', initMobileDropdowns);
+
 // Gestionnaire du formulaire de contact
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.querySelector('.contact-form');

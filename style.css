@@ -1132,11 +1132,46 @@ a:focus{outline:2px solid rgba(255,77,184,0.14);outline-offset:4px}
     margin-left: 0;
   }
   
+  .dropbtn {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .dropbtn::after {
+    content: '▼';
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown.active .dropbtn::after {
+    transform: rotate(180deg);
+  }
+  
   .dropdown-content {
+    display: none;
     position: static;
     transform: none;
-    margin-top: 8px;
+    margin-top: 0;
     width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .dropdown.active .dropdown-content {
+    display: block;
+    max-height: 500px;
+    margin-top: 8px;
+  }
+  
+  /* Désactiver le hover sur mobile */
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+  
+  .dropdown.active:hover .dropdown-content {
+    display: block;
   }
   
   .big {
