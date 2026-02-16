@@ -10,6 +10,69 @@ window.addEventListener('mousemove', (e)=>{
 // Simple progressive enhancement: add class when JS enabled
 document.documentElement.classList.add('js-enabled');
 
+// Gestion du menu hamburger mobile
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  const body = document.body;
+  
+  if (!hamburger || !nav) return;
+  
+  // Toggle menu principal
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+    body.classList.toggle('menu-open');
+  });
+  
+  // Fermer en cliquant sur l'overlay
+  body.addEventListener('click', function(e) {
+    if (body.classList.contains('menu-open') && 
+        !e.target.closest('.nav') && 
+        !e.target.closest('.hamburger')) {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+      body.classList.remove('menu-open');
+      
+      // Fermer tous les dropdowns
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+  
+  // Fermer le menu quand on clique sur un lien (sauf dropdowns)
+  nav.querySelectorAll('a:not(.dropbtn)').forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 768) {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        body.classList.remove('menu-open');
+        
+        // Fermer tous les dropdowns
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+  });
+  
+  // Fermer le menu lors du redimensionnement si on passe en desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+      body.classList.remove('menu-open');
+      
+      // Fermer tous les dropdowns
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+}
+
 // Gestion des menus déroulants sur mobile
 function initMobileDropdowns() {
   const dropdowns = document.querySelectorAll('.dropdown');
@@ -36,21 +99,13 @@ function initMobileDropdowns() {
       });
     }
   });
-  
-  // Fermer les dropdowns quand on clique ailleurs
-  document.addEventListener('click', function(e) {
-    if (window.innerWidth < 768) {
-      if (!e.target.closest('.dropdown')) {
-        dropdowns.forEach(dropdown => {
-          dropdown.classList.remove('active');
-        });
-      }
-    }
-  });
 }
 
 // Initialiser au chargement
-document.addEventListener('DOMContentLoaded', initMobileDropdowns);
+document.addEventListener('DOMContentLoaded', function() {
+  initMobileMenu();
+  initMobileDropdowns();
+});
 
 // Gestionnaire du formulaire de contact
 document.addEventListener('DOMContentLoaded', function() {
