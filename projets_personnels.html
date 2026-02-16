@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Procédures Techniques — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+  <!-- Arrière-plan galactique simplifié -->
+  <svg class="galaxy-bg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
+    <defs>
+      <style>
+        .galaxy-bg { background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%); }
+        .stars { fill: #ffffff; opacity: 0.8; animation: twinkle 3s ease-in-out infinite alternate; }
+        .stars-distant { fill: #cccccc; opacity: 0.4; animation: twinkle 4s ease-in-out infinite alternate-reverse; }
+        .stars-rose { fill: #ff4db8; opacity: 0.7; animation: twinkle 3s ease-in-out infinite alternate; }
+        .stars-rose-light { fill: #ff6bb8; opacity: 0.6; animation: twinkle 3.5s ease-in-out infinite alternate; }
+        .stars-rose-pale { fill: #ff8bc8; opacity: 0.5; animation: twinkle 4s ease-in-out infinite alternate; }
+        .stars-violet { fill: #9b6bff; opacity: 0.7; animation: twinkle 3.2s ease-in-out infinite alternate; }
+        .stars-violet-light { fill: #b86bff; opacity: 0.6; animation: twinkle 3.7s ease-in-out infinite alternate; }
+        .stars-violet-pale { fill: #d56bff; opacity: 0.5; animation: twinkle 4.2s ease-in-out infinite alternate; }
+        @keyframes twinkle { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+      </style>
+    </defs>
+
+    <!-- Étoiles blanches scintillantes -->
+    <circle class="stars" cx="100" cy="150" r="1"/>
+    <circle class="stars" cx="300" cy="80" r="1.5"/>
+    <circle class="stars" cx="500" cy="200" r="1"/>
+    <circle class="stars" cx="700" cy="120" r="1.2"/>
+    <circle class="stars" cx="900" cy="250" r="1"/>
+    <circle class="stars" cx="1100" cy="180" r="1.3"/>
+    <circle class="stars-distant" cx="200" cy="300" r="0.8"/>
+    <circle class="stars-distant" cx="400" cy="350" r="0.6"/>
+    <circle class="stars-distant" cx="600" cy="280" r="0.9"/>
+    <circle class="stars-distant" cx="800" cy="400" r="0.7"/>
+    <circle class="stars-distant" cx="1000" cy="320" r="0.8"/>
+    <circle class="stars-distant" cx="150" cy="450" r="0.6"/>
+    <circle class="stars-distant" cx="350" cy="500" r="0.9"/>
+    <circle class="stars-distant" cx="550" cy="480" r="0.7"/>
+    <circle class="stars-distant" cx="750" cy="520" r="0.8"/>
+    <circle class="stars-distant" cx="950" cy="460" r="0.6"/>
+
+    <!-- Étoiles roses scintillantes (densifiées) -->
+    <circle class="stars-rose" cx="250" cy="100" r="1.2"/>
+    <circle class="stars-rose" cx="450" cy="180" r="0.9"/>
+    <circle class="stars-rose" cx="650" cy="220" r="1.1"/>
+    <circle class="stars-rose" cx="850" cy="160" r="1"/>
+    <circle class="stars-rose" cx="1050" cy="280" r="0.8"/>
+    <circle class="stars-rose" cx="50" cy="120" r="0.7"/>
+    <circle class="stars-rose" cx="150" cy="80" r="1"/>
+    <circle class="stars-rose" cx="350" cy="240" r="0.8"/>
+    <circle class="stars-rose" cx="550" cy="190" r="1.1"/>
+    <circle class="stars-rose" cx="750" cy="300" r="0.9"/>
+    <circle class="stars-rose" cx="950" cy="220" r="1"/>
+    <circle class="stars-rose" cx="1150" cy="350" r="0.8"/>
+    <circle class="stars-rose" cx="80" cy="400" r="1.2"/>
+    <circle class="stars-rose" cx="280" cy="450" r="0.9"/>
+    <circle class="stars-rose" cx="480" cy="410" r="1"/>
+    <circle class="stars-rose" cx="680" cy="470" r="0.8"/>
+    <circle class="stars-rose" cx="880" cy="430" r="1.1"/>
+    <circle class="stars-rose" cx="1080" cy="490" r="0.7"/>
+    <circle class="stars-rose-light" cx="180" cy="380" r="1"/>
+    <circle class="stars-rose-light" cx="380" cy="420" r="0.7"/>
+    <circle class="stars-rose-light" cx="580" cy="360" r="0.9"/>
+    <circle class="stars-rose-light" cx="780" cy="440" r="0.8"/>
+    <circle class="stars-rose-light" cx="980" cy="390" r="1.1"/>
+    <circle class="stars-rose-light" cx="120" cy="320" r="0.8"/>
+    <circle class="stars-rose-light" cx="320" cy="270" r="1"/>
+    <circle class="stars-rose-light" cx="520" cy="330" r="0.9"/>
+    <circle class="stars-rose-light" cx="720" cy="290" r="0.7"/>
+    <circle class="stars-rose-light" cx="920" cy="370" r="1.1"/>
+    <circle class="stars-rose-light" cx="1120" cy="410" r="0.8"/>
+    <circle class="stars-rose-light" cx="220" cy="520" r="1"/>
+    <circle class="stars-rose-light" cx="420" cy="560" r="0.7"/>
+    <circle class="stars-rose-light" cx="620" cy="540" r="0.9"/>
+    <circle class="stars-rose-light" cx="820" cy="580" r="0.8"/>
+    <circle class="stars-rose-light" cx="1020" cy="520" r="1.1"/>
+    <circle class="stars-rose-pale" cx="120" cy="550" r="0.6"/>
+    <circle class="stars-rose-pale" cx="320" cy="580" r="0.8"/>
+    <circle class="stars-rose-pale" cx="520" cy="540" r="0.7"/>
+    <circle class="stars-rose-pale" cx="720" cy="600" r="0.9"/>
+    <circle class="stars-rose-pale" cx="920" cy="560" r="0.6"/>
+    <circle class="stars-rose-pale" cx="30" cy="480" r="0.8"/>
+    <circle class="stars-rose-pale" cx="230" cy="620" r="0.7"/>
+    <circle class="stars-rose-pale" cx="430" cy="590" r="0.9"/>
+    <circle class="stars-rose-pale" cx="630" cy="650" r="0.6"/>
+    <circle class="stars-rose-pale" cx="830" cy="610" r="0.8"/>
+    <circle class="stars-rose-pale" cx="1030" cy="570" r="0.7"/>
+    <circle class="stars-rose-pale" cx="1130" cy="630" r="0.9"/>
+    <circle class="stars-rose-pale" cx="160" cy="680" r="0.6"/>
+    <circle class="stars-rose-pale" cx="360" cy="660" r="0.8"/>
+    <circle class="stars-rose-pale" cx="560" cy="690" r="0.7"/>
+    <circle class="stars-rose-pale" cx="760" cy="670" r="0.9"/>
+    <circle class="stars-rose-pale" cx="960" cy="640" r="0.6"/>
+
+    <!-- Étoiles violettes scintillantes (densifiées) -->
+    <circle class="stars-violet" cx="150" cy="220" r="1"/>
+    <circle class="stars-violet" cx="350" cy="140" r="1.3"/>
+    <circle class="stars-violet" cx="550" cy="260" r="0.9"/>
+    <circle class="stars-violet" cx="750" cy="200" r="1.1"/>
+    <circle class="stars-violet" cx="950" cy="320" r="1"/>
+    <circle class="stars-violet" cx="70" cy="160" r="0.8"/>
+    <circle class="stars-violet" cx="270" cy="110" r="1.2"/>
+    <circle class="stars-violet" cx="470" cy="230" r="0.9"/>
+    <circle class="stars-violet" cx="670" cy="170" r="1"/>
+    <circle class="stars-violet" cx="870" cy="290" r="1.1"/>
+    <circle class="stars-violet" cx="1070" cy="250" r="0.8"/>
+    <circle class="stars-violet" cx="110" cy="350" r="1.3"/>
+    <circle class="stars-violet" cx="310" cy="390" r="0.9"/>
+    <circle class="stars-violet" cx="510" cy="370" r="1"/>
+    <circle class="stars-violet" cx="710" cy="410" r="0.8"/>
+    <circle class="stars-violet" cx="910" cy="380" r="1.1"/>
+    <circle class="stars-violet" cx="1110" cy="430" r="0.9"/>
+    <circle class="stars-violet-light" cx="220" cy="480" r="0.8"/>
+    <circle class="stars-violet-light" cx="420" cy="520" r="1"/>
+    <circle class="stars-violet-light" cx="620" cy="460" r="0.7"/>
+    <circle class="stars-violet-light" cx="820" cy="500" r="0.9"/>
+    <circle class="stars-violet-light" cx="1020" cy="480" r="0.8"/>
+    <circle class="stars-violet-light" cx="40" cy="420" r="1"/>
+    <circle class="stars-violet-light" cx="240" cy="360" r="0.7"/>
+    <circle class="stars-violet-light" cx="440" cy="400" r="0.9"/>
+    <circle class="stars-violet-light" cx="640" cy="340" r="0.8"/>
+    <circle class="stars-violet-light" cx="840" cy="380" r="1"/>
+    <circle class="stars-violet-light" cx="1040" cy="440" r="0.7"/>
+    <circle class="stars-violet-light" cx="140" cy="540" r="0.9"/>
+    <circle class="stars-violet-light" cx="340" cy="580" r="0.8"/>
+    <circle class="stars-violet-light" cx="540" cy="560" r="1"/>
+    <circle class="stars-violet-light" cx="740" cy="520" r="0.7"/>
+    <circle class="stars-violet-light" cx="940" cy="600" r="0.9"/>
+    <circle class="stars-violet-pale" cx="80" cy="620" r="0.7"/>
+    <circle class="stars-violet-pale" cx="280" cy="640" r="0.6"/>
+    <circle class="stars-violet-pale" cx="480" cy="610" r="0.8"/>
+    <circle class="stars-violet-pale" cx="680" cy="650" r="0.9"/>
+    <circle class="stars-violet-pale" cx="880" cy="630" r="0.7"/>
+    <circle class="stars-violet-pale" cx="10" cy="500" r="0.6"/>
+    <circle class="stars-violet-pale" cx="210" cy="550" r="0.8"/>
+    <circle class="stars-violet-pale" cx="410" cy="530" r="0.7"/>
+    <circle class="stars-violet-pale" cx="610" cy="570" r="0.9"/>
+    <circle class="stars-violet-pale" cx="810" cy="590" r="0.6"/>
+    <circle class="stars-violet-pale" cx="1010" cy="550" r="0.8"/>
+    <circle class="stars-violet-pale" cx="1180" cy="610" r="0.7"/>
+    <circle class="stars-violet-pale" cx="190" cy="680" r="0.9"/>
+    <circle class="stars-violet-pale" cx="390" cy="660" r="0.6"/>
+    <circle class="stars-violet-pale" cx="590" cy="690" r="0.8"/>
+    <circle class="stars-violet-pale" cx="790" cy="670" r="0.7"/>
+    <circle class="stars-violet-pale" cx="990" cy="650" r="0.9"/>
+  </svg>
+
+  <header class="site-header">
+    <div class="logo logo-with-icon rgb-neon">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+          <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+          <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+        </svg>
+      </span>
+      <span>Ambre Bodie</span>
+    </div>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+          <a href="index_cv.html" role="menuitem">Mon CV</a>
+          <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+        </div>
+      </div>
+
+      <a href="tcs.html">TCS</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+          <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+          <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+          <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+        </div>
+      </div>
+
+      <div class="dropdown centered">
+        <a href="veilles.html" class="dropbtn" aria-haspopup="true">Veilles</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+          <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+          <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1 class="panel-title neon" style="text-align: center; font-size: 3rem;">Mes Procédures Techniques</h1>
+      <p class="muted" style="text-align: center; margin-top: 20px; max-width: 900px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Parce qu'une infrastructure robuste repose avant tout sur une documentation infaillible. Retrouvez ici le référentiel détaillé de toutes mes interventions systèmes et réseaux.</p>
+      
+      <!-- Bulle Schéma d'Infrastructure -->
+      <div style="margin-top: 80px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="position: relative; background: transparent; border: none; border-radius: 20px; padding: 60px 40px; text-align: center; box-shadow: 0 0 30px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;">
+          <!-- Crochets HUD -->
+          <span style="position: absolute; top: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌈</span>
+          <span style="position: absolute; top: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌉</span>
+          <span style="position: absolute; bottom: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌊</span>
+          <span style="position: absolute; bottom: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌋</span>
+          
+          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Schéma d'Infrastructure</h2>
+          <p style="color: #aaa; margin-bottom: 40px; font-size: 1rem;">Vision globale de l'architecture réseau et systèmes</p>
+          
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 8px; padding: 15px 30px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.5)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)'; this.style.boxShadow='none';">
+              <span style="font-size: 1.3rem;">👁️</span>
+              Voir le Schéma
+            </a>
+            <a href="#" download style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 8px; padding: 15px 30px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)'; this.style.boxShadow='0 0 20px rgba(0, 217, 255, 0.5)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)'; this.style.boxShadow='none';">
+              <span style="font-size: 1.3rem;">📥</span>
+              Télécharger le Schéma
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Séparation avec titre -->
+      <div style="margin-top: 80px; margin-bottom: 60px; position: relative; display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; width: 100%; height: 2px; background: linear-gradient(to right, transparent, rgba(255, 107, 184, 0.3) 20%, rgba(255, 107, 184, 0.3) 80%, transparent);"></div>
+        <div style="position: relative; background: #000000; padding: 10px 30px; border: 2px solid #ff6bb8; border-radius: 50px; box-shadow: 0 0 20px rgba(255, 107, 184, 0.4);">
+          <span style="color: #ff6bb8; font-weight: bold; font-size: 1rem;">Mes Procédures Techniques</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 60px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <!-- Carte Procédure Active Directory -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Microsoft-Active-Directory-Integration.jpg" alt="Procédure Active Directory" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Active Directory</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Déploiement et configuration initiale d'un contrôleur de domaine sous Windows Server. Ce mode opératoire détaille l'installation des rôles AD DS et DNS, la promotion du serveur, ainsi que la structuration de base de l'annuaire pour centraliser la gestion des identités du réseau.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">DNS</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">DHCP</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">AD DS</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Users</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Windows Server</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure AD1EX configuration (1).pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure AD1EX configuration (1).pdf" download="Procedure_Active_Directory.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 2 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/GPO.png" alt="Procédure 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GPO</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille les étapes de configuration et de déploiement de Stratégies de Groupe (GPO) au sein d'un environnement Active Directory. Il se concentre sur l'automatisation de l'environnement de travail des utilisateurs à travers deux cas d'usage principaux : le mappage de lecteurs réseaux sécurisés et le déploiement centralisé d'un fond d'écran d'entreprise.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Windows Server</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Active Directory</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Policy</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure JPO.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure JPO.pdf" download="Procedure_JPO.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 3 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Exchange.png" alt="Procédure 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Exchange</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille le processus complet d'installation, de configuration et de validation d'un serveur de messagerie Microsoft Exchange. La procédure couvre toutes les étapes critiques, depuis la préparation des prérequis sur le système Windows Server jusqu'aux tests finaux de bon fonctionnement du flux de messagerie entre les utilisateurs.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Exchange</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Users</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Messagerie</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Active Directory</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure exchange.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure exchange.pdf" download="Procedure_Exchange.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+        <!-- Carte Procédure 4 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/GLPI.png" alt="Procédure 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GLPI</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique synthétise les étapes d'installation et de configuration de la solution de gestion de parc informatique GLPI sur un environnement Linux. Il retrace le déploiement depuis la préparation du serveur jusqu'au paramétrage de l'interface web
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">GLPI.V11</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Apache</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Ubuntun.V24</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MySQL</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MariaDB</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure GLPI.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure GLPI.pdf" download="Procedure_GLPI.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 5 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Zabbix_logo.png" alt="Procédure 5" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Zabbix</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille le processus complet d'installation et de configuration de la solution de supervision réseau Zabbix. Il retrace la mise en place du serveur de supervision centralisé sur un environnement Debian, ainsi que le déploiement et la configuration des agents sur une infrastructure hétérogène comprenant des serveurs Windows, Linux et un pare-feu pfSense
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Zabbix.V7.4</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Debian13</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Monitoring</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MySQL</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure Zabbix.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure Zabbix.pdf" download="Procedure_Zabbix.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer muted">© Ambre Bodie</footer>
+
+  <!-- Modal de visualisation PDF -->
+  <div id="pdfModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; width: 90%; height: 90%; max-width: 1200px; background: #1a1a1a; border: 2px solid #ff6bb8; border-radius: 15px; box-shadow: 0 0 50px rgba(255, 107, 184, 0.5); overflow: hidden;">
+      <!-- Bouton fermer -->
+      <button onclick="closePdfModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.4)'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.transform='rotate(0deg)';">
+        ✕
+      </button>
+      
+      <!-- Titre -->
+      <div style="background: rgba(255, 107, 184, 0.1); border-bottom: 2px solid #ff6bb8; padding: 20px; text-align: center;">
+        <h2 style="color: #ff6bb8; margin: 0; font-size: 1.5rem;">📄 Visualisation de la Procédure</h2>
+      </div>
+      
+      <!-- Iframe PDF -->
+      <iframe id="pdfViewer" style="width: 100%; height: calc(100% - 80px); border: none;" src=""></iframe>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    function openPdfModal(pdfPath) {
+      const modal = document.getElementById('pdfModal');
+      const viewer = document.getElementById('pdfViewer');
+      viewer.src = pdfPath;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Empêcher le scroll de la page
+    }
+    
+    function closePdfModal() {
+      const modal = document.getElementById('pdfModal');
+      const viewer = document.getElementById('pdfViewer');
+      modal.style.display = 'none';
+      viewer.src = ''; // Vider l'iframe
+      document.body.style.overflow = ''; // Restaurer le scroll
+    }
+    
+    // Fermer le modal en cliquant en dehors
+    document.getElementById('pdfModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePdfModal();
+      }
+    });
+    
+    // Fermer le modal avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closePdfModal();
+      }
+    });
+  </script>
+</body>
+</html>
