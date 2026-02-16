@@ -87,6 +87,11 @@ body.bg-dark{
 .dropdown{position:relative;display:inline-block;margin-left:0}
 .dropbtn{color:var(--neon-pink-2);text-decoration:none;padding:8px 10px;border-radius:8px;transition:all .18s ease}
 
+/* Masquer la flèche sur desktop */
+.dropbtn::after {
+  content: none;
+}
+
 /* menu buttons: pink by default, neon pink on hover */
 .nav a, .dropbtn{
   color:var(--neon-pink-2);
@@ -1202,9 +1207,11 @@ a:focus{outline:2px solid rgba(255,77,184,0.14);outline-offset:4px}
     align-items: center;
   }
   
+  /* Afficher la flèche uniquement sur mobile */
   .dropbtn::after {
     content: '▼';
-    margin-left: 8px;
+    margin-left: auto;
+    padding-left: 8px;
     font-size: 0.8rem;
     transition: transform 0.3s ease;
   }
