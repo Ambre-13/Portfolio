@@ -139,8 +139,12 @@ body::before {
 .dropdown-content a:hover{background:rgba(155,107,255,0.12);color:var(--primary);box-shadow:0 0 15px rgba(155,107,255,0.25)}
 .dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
 
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:0;position:relative;overflow:hidden}
-.hero-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:none;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:1}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px;position:relative;overflow:hidden}
+.hero-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:none}
+
+/* Positionnement spécifique pour la page d'accueil avec terminal */
+.hero-home{padding:0}
+.hero-inner-centered{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:1;padding:0}
 .big{font-size:2.2rem;margin:0 0 12px;color:var(--text-dark);font-weight:700}
 .lead{color:var(--text-muted);margin:0 0 18px;font-size:1.1rem}
 
