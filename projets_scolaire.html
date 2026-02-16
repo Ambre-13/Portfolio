@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets Scolaires E6 — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo logo-with-icon rgb-neon">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+          <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+          <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+        </svg>
+      </span>
+      <span>Ambre Bodie</span>
+    </div>
+    
+    <!-- Bouton hamburger pour mobile -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+          <a href="index_cv.html" role="menuitem">Mon CV</a>
+          <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+        </div>
+      </div>
+
+      <a href="tcs.html">TCS</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+          <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+          <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+          <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+        </div>
+      </div>
+
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+          <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+          <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1 class="panel-title neon" style="text-align: center;">Projets Scolaires E6</h1>
+      <p class="muted" style="text-align: center; margin-top: 20px;">La théorie en action : mes réalisations scolaires.</p>
+      
+      <div style="margin-top: 60px; text-align: center; color: #aaa;">
+        <p>Contenu en construction...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer muted">© Ambre Bodie</footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+

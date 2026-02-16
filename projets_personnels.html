@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Procédures Techniques — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo logo-with-icon rgb-neon">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+          <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+          <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+        </svg>
+      </span>
+      <span>Ambre Bodie</span>
+    </div>
+    
+    <!-- Bouton hamburger pour mobile -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+          <a href="index_cv.html" role="menuitem">Mon CV</a>
+          <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+        </div>
+      </div>
+
+      <a href="tcs.html">TCS</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+          <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+          <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+          <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+        </div>
+      </div>
+
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+          <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+          <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1 class="panel-title neon" style="text-align: center; font-size: 3rem;">Mes Procédures Techniques</h1>
+      <p class="muted" style="text-align: center; margin-top: 20px; max-width: 900px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Parce qu'une infrastructure robuste repose avant tout sur une documentation infaillible. Retrouvez ici le référentiel détaillé de toutes mes interventions systèmes et réseaux.</p>
+      
+      <!-- Bulle Schéma d'Infrastructure -->
+      <div style="margin-top: 80px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="position: relative; background: transparent; border: none; border-radius: 20px; padding: 60px 40px; text-align: center; box-shadow: 0 0 30px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;">
+          <!-- Crochets HUD -->
+          <span style="position: absolute; top: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌈</span>
+          <span style="position: absolute; top: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌉</span>
+          <span style="position: absolute; bottom: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌊</span>
+          <span style="position: absolute; bottom: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌋</span>
+          
+          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Schéma d'Infrastructure</h2>
+          <p style="color: #aaa; margin-bottom: 40px; font-size: 1rem;">Vision globale de l'architecture réseau et systèmes</p>
+          
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 8px; padding: 15px 30px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.5)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)'; this.style.boxShadow='none';">
+              <span style="font-size: 1.3rem;">👁️</span>
+              Voir le Schéma
+            </a>
+            <a href="#" download style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 8px; padding: 15px 30px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)'; this.style.boxShadow='0 0 20px rgba(0, 217, 255, 0.5)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)'; this.style.boxShadow='none';">
+              <span style="font-size: 1.3rem;">📥</span>
+              Télécharger le Schéma
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Séparation avec titre -->
+      <div style="margin-top: 80px; margin-bottom: 60px; position: relative; display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; width: 100%; height: 2px; background: linear-gradient(to right, transparent, rgba(255, 107, 184, 0.3) 20%, rgba(255, 107, 184, 0.3) 80%, transparent);"></div>
+        <div style="position: relative; background: #000000; padding: 10px 30px; border: 2px solid #ff6bb8; border-radius: 50px; box-shadow: 0 0 20px rgba(255, 107, 184, 0.4);">
+          <span style="color: #ff6bb8; font-weight: bold; font-size: 1rem;">Mes Procédures Techniques</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 60px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <!-- Carte Procédure Active Directory -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Microsoft-Active-Directory-Integration.jpg" alt="Procédure Active Directory" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Active Directory</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Déploiement et configuration initiale d'un contrôleur de domaine sous Windows Server. Ce mode opératoire détaille l'installation des rôles AD DS et DNS, la promotion du serveur, ainsi que la structuration de base de l'annuaire pour centraliser la gestion des identités du réseau.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">DNS</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">DHCP</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">AD DS</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Users</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Windows Server</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure AD1EX configuration (1).pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure AD1EX configuration (1).pdf" download="Procedure_Active_Directory.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 2 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/GPO.png" alt="Procédure 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GPO</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille les étapes de configuration et de déploiement de Stratégies de Groupe (GPO) au sein d'un environnement Active Directory. Il se concentre sur l'automatisation de l'environnement de travail des utilisateurs à travers deux cas d'usage principaux : le mappage de lecteurs réseaux sécurisés et le déploiement centralisé d'un fond d'écran d'entreprise.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Windows Server</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Active Directory</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Policy</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure JPO.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure JPO.pdf" download="Procedure_JPO.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 3 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Exchange.png" alt="Procédure 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Exchange</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille le processus complet d'installation, de configuration et de validation d'un serveur de messagerie Microsoft Exchange. La procédure couvre toutes les étapes critiques, depuis la préparation des prérequis sur le système Windows Server jusqu'aux tests finaux de bon fonctionnement du flux de messagerie entre les utilisateurs.
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Exchange</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Users</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Messagerie</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Active Directory</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure exchange.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure exchange.pdf" download="Procedure_Exchange.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+        <!-- Carte Procédure 4 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/GLPI.png" alt="Procédure 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GLPI</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique synthétise les étapes d'installation et de configuration de la solution de gestion de parc informatique GLPI sur un environnement Linux. Il retrace le déploiement depuis la préparation du serveur jusqu'au paramétrage de l'interface web
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">GLPI.V11</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Apache</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Ubuntun.V24</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MySQL</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MariaDB</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure GLPI.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure GLPI.pdf" download="Procedure_GLPI.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte Procédure 5 (Placeholder) -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+          <!-- Image placeholder -->
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Zabbix_logo.png" alt="Procédure 5" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Zabbix</h3>
+          
+          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique détaille le processus complet d'installation et de configuration de la solution de supervision réseau Zabbix. Il retrace la mise en place du serveur de supervision centralisé sur un environnement Debian, ainsi que le déploiement et la configuration des agents sur une infrastructure hétérogène comprenant des serveurs Windows, Linux et un pare-feu pfSense
+          </p>
+          
+          <!-- Mini bulles tags -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Zabbix.V7.4</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Debian13</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Monitoring</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">MySQL</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" onclick="openPdfModal('Images/Procédure Zabbix.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure Zabbix.pdf" download="Procedure_Zabbix.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer muted">© Ambre Bodie</footer>
+
+  <!-- Modal de visualisation PDF -->
+  <div id="pdfModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; width: 90%; height: 90%; max-width: 1200px; background: #1a1a1a; border: 2px solid #ff6bb8; border-radius: 15px; box-shadow: 0 0 50px rgba(255, 107, 184, 0.5); overflow: hidden;">
+      <!-- Bouton fermer -->
+      <button onclick="closePdfModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.4)'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.transform='rotate(0deg)';">
+        ✕
+      </button>
+      
+      <!-- Titre -->
+      <div style="background: rgba(255, 107, 184, 0.1); border-bottom: 2px solid #ff6bb8; padding: 20px; text-align: center;">
+        <h2 style="color: #ff6bb8; margin: 0; font-size: 1.5rem;">📄 Visualisation de la Procédure</h2>
+      </div>
+      
+      <!-- Iframe PDF -->
+      <iframe id="pdfViewer" style="width: 100%; height: calc(100% - 80px); border: none;" src=""></iframe>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    function openPdfModal(pdfPath) {
+      const modal = document.getElementById('pdfModal');
+      const viewer = document.getElementById('pdfViewer');
+      viewer.src = pdfPath;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Empêcher le scroll de la page
+    }
+    
+    function closePdfModal() {
+      const modal = document.getElementById('pdfModal');
+      const viewer = document.getElementById('pdfViewer');
+      modal.style.display = 'none';
+      viewer.src = ''; // Vider l'iframe
+      document.body.style.overflow = ''; // Restaurer le scroll
+    }
+    
+    // Fermer le modal en cliquant en dehors
+    document.getElementById('pdfModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePdfModal();
+      }
+    });
+    
+    // Fermer le modal avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closePdfModal();
+      }
+    });
+  </script>
+</body>
+</html>
+

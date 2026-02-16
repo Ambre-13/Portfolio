@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="logo logo-with-icon rgb-neon">
+            <span class="logo-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+                    <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+                    <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+                </svg>
+            </span>
+            <span>Ambre Bodie</span>
+        </div>
+        
+        <!-- Bouton hamburger pour mobile -->
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <a href="index.html">Accueil</a>
+            
+            <div class="dropdown centered">
+                <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+                <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+                    <a href="index_cv.html" role="menuitem">Mon CV</a>
+                    <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+                </div>
+            </div>
+
+            <a href="tcs.html">TCS</a>
+
+            <div class="dropdown">
+                <a href="projets.html" class="dropbtn" aria-haspopup="true">Projets</a>
+                <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+                    <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+                    <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+                    <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+                </div>
+            </div>
+
+            <div class="dropdown centered">
+                <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+                <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+                    <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+                    <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-inner">
+            <div class="cv-futuristic">
+                <!-- Profile Card -->
+                <div class="cv-profile-card">
+                    <div class="profile-avatar">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-content">
+                            <img src="Images/profile.jpg" alt="Ambre Bodie" class="avatar-image">
+                        </div>
+                    </div>
+                    <h1 class="profile-name rgb-neon">AMBRE BODIE</h1>
+                    <p class="profile-role">Étudiante en BTS SIO</p>
+                    
+                    <div class="profile-personal">
+                        <h3 class="skills-title neon">Profil Personnel</h3>
+                        <p class="profile-description">Je suis une personne investie qui aime le contact avec autrui. J'aime apprendre et acquérir de nouvelles compétences. Dynamique à l'écoute, rigoureuse et aimant travailler en équipe.</p>
+                    </div>
+                    
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <span class="info-text">abodie230@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📱</span>
+                            <span class="info-text">06 35 66 12 18</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎂</span>
+                            <span class="info-text">Née le 01/10/2001</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌍</span>
+                            <span class="info-text">Nationalité : Française</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">👤</span>
+                            <span class="info-text">Age : 24 ans</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🚗</span>
+                            <span class="info-text">Permis B - En cours</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-skills">
+                        <h3 class="skills-title neon">Soft Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">💎 Persévérance</span>
+                            <span class="skill-tag">⚡ Investie</span>
+                            <span class="skill-tag">👥 Management</span>
+                            <span class="skill-tag">🔍 Curiosité</span>
+                            <span class="skill-tag">🎨 Créative</span>
+                            <span class="skill-tag">🔄 Cherche l'amélioration continue</span>
+                            <span class="skill-tag">🤝 Travail en équipe</span>
+                            <span class="skill-tag">📊 Capacité d'analyser</span>
+                            <span class="skill-tag">🌟 Adaptabilité</span>
+                            <span class="skill-tag">💬 Négociation</span>
+                            <span class="skill-tag">💪 Dynamique</span>
+                            <span class="skill-tag">🧘 Gestion du stress</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-hard-skills">
+                        <h3 class="skills-title neon">Hard Skills</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <span class="skill-name">Segmentation du réseau, VLAN</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 100%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">pfSense</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 100%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Active Directory</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">ProxMox</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">HyperV</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Linux</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Windows</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Accueil de la clientèle</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Gestion de stock et de commande</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 92%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Management</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Organisation et Travail en équipe</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 94%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Audit - Inventaire</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">SEO - SEA</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-name">Word - Excel</span>
+                                <div class="skill-progress"><div class="skill-fill" style="width: 90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-interests">
+                        <h3 class="skills-title neon">Intérêts & Loisirs</h3>
+                        <div class="interest-tags">
+                            <span class="interest-tag">🎮 Jeux Vidéos</span>
+                            <span class="interest-tag">⚽ Sport</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="cv-main-content">
+                    <!-- Experience Section -->
+                    <section class="cv-futuristic-section experience-section">
+                        <h2 class="section-header">
+                            <span class="section-icon">💼</span>
+                            <span class="section-title rgb-neon">EXPÉRIENCE PROFESSIONNELLE</span>
+                            <div class="section-line"></div>
+                        </h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2025 - En cours</div>
+                                    <h3 class="timeline-title">Pilote client et réseau (alternance)</h3>
+                                    <p class="timeline-company">Orange</p>
+                                    <ul class="timeline-tasks">
+                                        <li>Gestion des demandes clients et coordination réseau</li>
+                                        <li>Suivi des tickets et priorisation des interventions</li>
+                                        <li>Support et communication avec les équipes techniques</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2025</div>
+                                    <h3 class="timeline-title">Employée Principal</h3>
+                                    <p class="timeline-company">Aldi</p>
+                                    <ul class="timeline-tasks">
+                                        <li>Gestion de l'équipe</li>
+                                        <li>Gestion de l'espèce</li>
+                                        <li>Fermeture et ouverture du magasin</li>
+                                        <li>Inventaire</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2025</div>
+                                    <h3 class="timeline-title">Jury Professionnel</h3>
+                                    <p class="timeline-company">Lycée Sully</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2025</div>
+                                    <h3 class="timeline-title">Responsable Magasin Alternance</h3>
+                                    <p class="timeline-company">Carrefour Market Cantini</p>
+                                    <ul class="timeline-tasks">
+                                        <li>Management de l'équipe</li>
+                                        <li>Réception Marchandise</li>
+                                        <li>Administration</li>
+                                        <li>Gestion et supervision du Magasin</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2023-2024</div>
+                                    <h3 class="timeline-title">Responsable Caisse Alternance</h3>
+                                    <p class="timeline-company">Carrefour Market Cantini</p>
+                                    <ul class="timeline-tasks">
+                                        <li>Management d'une équipe de caissière</li>
+                                        <li>Gestion d'un rayon + des stocks</li>
+                                        <li>Réception et gestion de la marchandise</li>
+                                        <li>Accueil et orientation de la clientèle</li>
+                                        <li>Mise en rayon + facing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-badge">2021-2023</div>
+                                    <h3 class="timeline-title">Responsable Caisse Étudiante</h3>
+                                    <p class="timeline-company">Carrefour Market Rouet</p>
+                                    <ul class="timeline-tasks">
+                                        <li>Gestion de l'espèce</li>
+                                        <li>Clôture de caisse</li>
+                                        <li>Gestion de la caisse</li>
+                                        <li>Accueil et orientation de la clientèle</li>
+                                        <li>Mise en rayon</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education Section -->
+                    <section class="cv-futuristic-section education-section">
+                        <h2 class="section-header">
+                            <span class="section-icon">🎓</span>
+                            <span class="section-title rgb-neon">ÉDUCATION</span>
+                            <div class="section-line"></div>
+                        </h2>
+                        
+                        <div class="education-grid">
+                            <div class="education-card" data-aos="zoom-in">
+                                <div class="education-year">En cours</div>
+                                <h3 class="education-title">BTS SIO option SISR</h3>
+                                <p class="education-school">IFC Marseille</p>
+                            </div>
+
+                            <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="education-year">2024</div>
+                                <h3 class="education-title">Bachelor Chargé de Développement Commercial et Marketing</h3>
+                                <p class="education-school">Wiki Learn Formation</p>
+                                <p class="education-note">+ Certification en webmarketing</p>
+                            </div>
+
+                            <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="education-year">2023</div>
+                                <h3 class="education-title">Licence 3 Science De La Vie</h3>
+                                <p class="education-subtitle">Spécialité Biologie Cellulaire</p>
+                                <p class="education-school">Université des Sciences Luminy</p>
+                                <p class="education-mention">Mention assez bien</p>
+                            </div>
+
+                            <div class="education-card" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="education-year">2019</div>
+                                <h3 class="education-title">Baccalauréat Scientifique</h3>
+                                <p class="education-school">Lycée Périer</p>
+                                <p class="education-mention">Mention assez bien</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

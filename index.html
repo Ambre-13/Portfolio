@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — E‑Girl Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo logo-with-icon rgb-neon">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+          <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+          <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+        </svg>
+      </span>
+      <span>Ambre Bodie</span>
+    </div>
+    
+    <!-- Bouton hamburger pour mobile -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+          <a href="index_cv.html" role="menuitem">Mon CV</a>
+          <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+        </div>
+      </div>
+
+      <a href="tcs.html">TCS</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+          <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+          <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+          <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+        </div>
+      </div>
+
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+          <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+          <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero hero-home">
+      <div class="hero-inner hero-inner-centered">
+        <!-- Terminal interactif flottant -->
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+              </div>
+              <div class="terminal-title">root@ambre-portfolio:~</div>
+            </div>
+            <div class="terminal-content">
+              <div class="terminal-line">
+                <span class="terminal-prompt">root@ambre</span>
+                <span class="terminal-path">~</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2 class="panel-title neon">Projets</h2>
+      <div class="grid">
+        <article class="card">
+          <h3 class="card-title">Toute les procédures</h3>
+          <p class="muted">Architectures, Systèmes et Réseaux : Mon Laboratoire</p>
+          <a class="link" href="projets_personnels.html">Voir</a>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Projet Professionnels E5</h3>
+          <p class="muted">De la théorie à la pratique professionnelle.</p>
+          <a class="link" href="#">Voir</a>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Projets Scolaires E6</h3>
+          <p class="muted">La théorie en action : mes réalisations scolaires.</p>
+          <a class="link" href="#">Voir</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2 class="panel-title neon">Compétences</h2>
+      <div class="grid">
+        <article class="card">
+          <h3 class="card-title">Systèmes</h3>
+          <ul class="skills-list">
+            <li><span style="color: #00d9ff;">&gt;</span> Windows Server</li>
+            <li><span style="color: #00d9ff;">&gt;</span> Linux</li>
+            <li><span style="color: #00d9ff;">&gt;</span> Active Directory</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Réseaux</h3>
+          <ul class="skills-list">
+            <li><span style="color: #ff6bb8;">//</span> VLAN</li>
+            <li><span style="color: #ff6bb8;">//</span> pfSense</li>
+            <li><span style="color: #ff6bb8;">//</span> Zyxel</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Outils</h3>
+          <ul class="skills-list">
+            <li><span style="color: #00d9ff;">&gt;</span> ProxMox</li>
+            <li><span style="color: #00d9ff;">&gt;</span> Hyper Viseur Open-Source</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2 class="panel-title neon">Contact</h2>
+      <p class="muted">Envie de collaborer ou de discuter ? Remplissez le formulaire ci-dessous !</p>
+
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="be898117-a4b6-4a07-8008-c7bb33306537">
+        
+        <div class="form-group">
+          <label for="name" class="form-label">Nom *</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" class="form-label">Sujet</label>
+          <input type="text" id="contact_subject" name="contact_subject" class="form-input" placeholder="Collaboration, projet, etc.">
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message *</label>
+          <textarea id="message" name="message" class="form-textarea" rows="5" required placeholder="Votre message..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit neon">Envoyer le message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer muted">© Ambre Bodie</footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

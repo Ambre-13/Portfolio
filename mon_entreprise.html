@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Entreprise — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo logo-with-icon rgb-neon">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="52" height="32" rx="4" ry="4" class="icon-screen"/>
+          <rect x="12" y="12" width="40" height="20" rx="2" ry="2" class="icon-panel"/>
+          <rect x="20" y="40" width="24" height="4" rx="2" ry="2" class="icon-base"/>
+        </svg>
+      </span>
+      <span>Ambre Bodie</span>
+    </div>
+    
+    <!-- Bouton hamburger pour mobile -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true">A propos</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu A propos">
+          <a href="index_cv.html" role="menuitem">Mon CV</a>
+          <a href="mon_entreprise.html" role="menuitem">Mon entreprise</a>
+        </div>
+      </div>
+
+      <a href="tcs.html">TCS</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
+          <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
+          <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
+          <a href="projets_scolaire.html" role="menuitem">Projets Scolaires E6</a>
+        </div>
+      </div>
+
+      <div class="dropdown centered">
+        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
+          <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
+          <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1 class="panel-title neon" style="text-align: center; font-size: 2.8rem;">Mon Entreprise</h1>
+      <p class="muted" style="text-align: center; font-size: 1.2rem; margin-bottom: 50px;">Découvrez l'entreprise où j'effectue mon BTS SIO SISR</p>
+      
+      <!-- Carte principale de l'entreprise -->
+      <div style="max-width: 900px; margin: 0 auto 50px auto; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 20px; padding: 40px; box-shadow: 0 0 30px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 50px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.3)'; this.style.transform='translateY(0)';">
+        
+        <!-- Nom de l'entreprise -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <h2 style="color: #ff8800; font-size: 2.2rem; margin-bottom: 10px; text-shadow: 0 0 20px rgba(255, 136, 0, 0.5);">Orange</h2>
+          <p style="color: #00d9ff; font-size: 1.1rem; margin: 0;">Secteur d'activité : Télécommunication</p>
+        </div>
+
+        <!-- Informations principales -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px;">
+          
+          <div style="background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.15)'; this.style.boxShadow='0 0 20px rgba(0, 217, 255, 0.3)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)'; this.style.boxShadow='none';">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00d9ff" stroke-width="2" style="margin-bottom: 10px;">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <h3 style="color: #00d9ff; margin: 0 0 5px 0; font-size: 1rem;">Effectif</h3>
+            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">140 000 employés</p>
+          </div>
+
+          <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.15)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.3)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)'; this.style.boxShadow='none';">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6bb8" stroke-width="2" style="margin-bottom: 10px;">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <h3 style="color: #ff6bb8; margin: 0 0 5px 0; font-size: 1rem;">Création</h3>
+            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">1988</p>
+          </div>
+
+          <div style="background: rgba(155, 107, 255, 0.1); border: 1px solid #9b6bff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(155, 107, 255, 0.15)'; this.style.boxShadow='0 0 20px rgba(155, 107, 255, 0.3)';" onmouseout="this.style.background='rgba(155, 107, 255, 0.1)'; this.style.boxShadow='none';">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9b6bff" stroke-width="2" style="margin-bottom: 10px;">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <h3 style="color: #9b6bff; margin: 0 0 5px 0; font-size: 1rem;">Localisation</h3>
+            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">Marseille, France</p>
+          </div>
+        </div>
+
+        <!-- Description de l'entreprise -->
+        <div style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+          <h3 style="color: #00d9ff; margin: 0 0 15px 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d9ff" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            Présentation
+          </h3>
+          <p style="color: #aaa; line-height: 1.8; margin: 0; font-size: 1rem;">
+            Orange (anciennement France Télécom) est l'un des principaux opérateurs de télécommunications dans le monde et le leader historique sur le marché français. L'entreprise fournit des services de connectivité et des solutions numériques aux particuliers, aux professionnels et aux grandes entreprises.
+          </p>
+        </div>
+
+        <!-- Mon rôle -->
+        <div style="background: rgba(255, 107, 184, 0.05); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 12px; padding: 25px;">
+          <h3 style="color: #ff6bb8; margin: 0 0 15px 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6bb8" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            Mon Rôle et Missions
+          </h3>
+          <p style="color: #aaa; line-height: 1.8; margin: 0 0 15px 0; font-size: 1rem;">
+            Description de  mes missions principales et les projets sur lesquels je travaille
+          </p>
+          
+          <!-- Liste des missions -->
+          <ul style="color: #aaa; line-height: 1.8; padding-left: 20px; margin: 0;">
+            <li style="margin-bottom: 8px;">Mission 1 : Je pilote et coordonne les interventions techniques pour les clients Grand Public et Entreprise, sur les réseaux cuivre et fibre optique.</li>
+            <li style="margin-bottom: 8px;">Mission 2 : Je planifie les opérations terrain et m'assure du respect des engagements contractuels et de la satisfaction client.</li>
+            <li style="margin-bottom: 8px;">Mission 3 : J'interviens sur le traitement des signalements, le suivi des cas complexes, la gestion des priorités, et le pilotage des aléas.</li>
+            <li style="margin-bottom: 8px;">Mission 4 : Je collabore quotidiennement avec les techniciens, les managers et les prestataires, tout en assurant un reporting rigoureux dans les outils Orange.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Technologies et outils utilisés -->
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 class="neon" style="color: #00d9ff; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Technologies et Outils Utilisés</h2>
+        
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+          <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Windows</span>
+          <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(0, 217, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Ocapi</span>
+          <span style="background: rgba(155, 107, 255, 0.15); border: 1px solid #9b6bff; border-radius: 25px; padding: 10px 20px; color: #9b6bff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(155, 107, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Oceane</span>
+          <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Fibre</span>
+          <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(0, 217, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Cuivre</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer muted">© Ambre Bodie</footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
