@@ -73,17 +73,33 @@
           <span style="position: absolute; bottom: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌊</span>
           <span style="position: absolute; bottom: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌋</span>
           
-          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Schéma d'Infrastructure</h2>
-          <p style="color: #aaa; margin-bottom: 40px; font-size: 1rem;">Vision globale de l'architecture réseau et systèmes</p>
+          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Architecture Réseau de l'Infrastructure S1P2</h2>
+          <p style="color: #aaa; margin-bottom: 10px; font-size: 1rem;">Bodie Ambre</p>
+          <p style="color: #aaa; margin-bottom: 30px; font-size: 1.2rem;">De la virtualisation sous Proxmox au routage avec pfSense : découvrez le déploiement de l'infrastructure S1P2.</p>
           
-          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 8px; padding: 15px 30px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.5)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)'; this.style.boxShadow='none';">
-              <span style="font-size: 1.3rem;">👁️</span>
-              Voir le Schéma
+          <!-- Bulles de technologies -->
+          <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">pfSense</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">Proxmox</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">GLPI</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">Zabbix</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">Active Directory</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">VLANs</span>
+            <span style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 20px; padding: 8px 20px; color: #ff6bb8; font-weight: bold; font-size: 0.9rem;">Windows Server</span>
+          </div>
+          
+          <div style="display: flex; justify-content: center; margin-top: 30px;">
+            <img src="Images/Schéma réseau 2.0.png" alt="Schéma d'infrastructure réseau" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.3)';">
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+            <a href="#" onclick="openImageModal('Images/Schéma réseau 2.0.png'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+              <span>👁️</span>
+              Visualiser
             </a>
-            <a href="#" download style="display: inline-flex; align-items: center; gap: 10px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 8px; padding: 15px 30px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)'; this.style.boxShadow='0 0 20px rgba(0, 217, 255, 0.5)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)'; this.style.boxShadow='none';">
-              <span style="font-size: 1.3rem;">📥</span>
-              Télécharger le Schéma
+            <a href="Images/Schéma réseau 2.0.png" download="Schema_Reseau_S1P2.png" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+              <span>📥</span>
+              Télécharger
             </a>
           </div>
         </div>
@@ -286,6 +302,26 @@
     </div>
   </div>
 
+  <!-- Modal de visualisation Image -->
+  <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; width: 90%; height: 90%; max-width: 1400px; background: #1a1a1a; border: 2px solid #ff6bb8; border-radius: 15px; box-shadow: 0 0 50px rgba(255, 107, 184, 0.5); overflow: hidden; display: flex; flex-direction: column;">
+      <!-- Bouton fermer -->
+      <button onclick="closeImageModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.4)'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.transform='rotate(0deg)';">
+        ✕
+      </button>
+      
+      <!-- Titre -->
+      <div style="background: rgba(255, 107, 184, 0.1); border-bottom: 2px solid #ff6bb8; padding: 20px; text-align: center;">
+        <h2 style="color: #ff6bb8; margin: 0; font-size: 1.5rem;">📊 Architecture Réseau de l'Infrastructure S1P2</h2>
+      </div>
+      
+      <!-- Image -->
+      <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: center; padding: 20px; background: #000;">
+        <img id="imageViewer" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px;" src="" alt="Schéma réseau">
+      </div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
   <script>
     function openPdfModal(pdfPath) {
@@ -304,17 +340,41 @@
       document.body.style.overflow = ''; // Restaurer le scroll
     }
     
-    // Fermer le modal en cliquant en dehors
+    function openImageModal(imagePath) {
+      const modal = document.getElementById('imageModal');
+      const viewer = document.getElementById('imageViewer');
+      viewer.src = imagePath;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Empêcher le scroll de la page
+    }
+    
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      const viewer = document.getElementById('imageViewer');
+      modal.style.display = 'none';
+      viewer.src = ''; // Vider l'image
+      document.body.style.overflow = ''; // Restaurer le scroll
+    }
+    
+    // Fermer le modal PDF en cliquant en dehors
     document.getElementById('pdfModal').addEventListener('click', function(e) {
       if (e.target === this) {
         closePdfModal();
       }
     });
     
-    // Fermer le modal avec la touche Échap
+    // Fermer le modal Image en cliquant en dehors
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeImageModal();
+      }
+    });
+    
+    // Fermer les modals avec la touche Échap
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closePdfModal();
+        closeImageModal();
       }
     });
   </script>
