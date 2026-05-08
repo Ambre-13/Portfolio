@@ -1202,26 +1202,28 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
   /* Menu mobile */
   .nav {
     position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 280px;
-    max-width: 80vw;
+    top: 72px;
+    right: 12px;
+    height: auto;
+    width: min(320px, calc(100vw - 24px));
+    max-width: none;
+    max-height: calc(100vh - 88px);
     background: #ffffff;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     flex-direction: column;
     gap: 0;
-    padding: 80px 20px 20px;
-    box-shadow: -5px 0 30px rgba(155,107,255,0.25), 0 0 50px rgba(199,125,255,0.2);
-    border-left: 1px solid rgba(155,107,255,0.28);
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(155,107,255,0.18), 0 0 24px rgba(199,125,255,0.12);
+    border: 1px solid rgba(155,107,255,0.22);
+    border-radius: 16px;
     transition: right 0.3s ease;
     overflow-y: auto;
     z-index: 1000;
   }
   
   .nav.active {
-    right: 0;
+    right: 12px;
   }
   
   .nav a, .dropbtn {
@@ -1298,24 +1300,13 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
   
   /* Overlay pour fermer le menu */
   body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
+    content: none;
+    display: none;
   }
   
   body.menu-open::before {
-    opacity: 1;
-    visibility: visible;
+    content: none;
+    display: none;
   }
   
   body.menu-open {
@@ -1385,6 +1376,10 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
   
   .nav {
     gap: 10px;
+    top: 68px;
+    right: 10px;
+    width: min(92vw, 320px);
+    border-radius: 14px;
   }
   
   .nav a, .dropbtn {
@@ -1473,6 +1468,9 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
   
   .nav {
     gap: 8px;
+    top: 62px;
+    right: 8px;
+    width: calc(100vw - 16px);
   }
   
   .nav a {
