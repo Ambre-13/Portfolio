@@ -208,7 +208,7 @@
         try {
           const { timestamp } = JSON.parse(authData);
           if (Date.now() - timestamp < AUTH_EXPIRY) {
-            window.location.href = 'index.html';
+            window.location.href = './index.html';
             return;
           }
         } catch (e) {
@@ -234,7 +234,7 @@
           authenticated: true
         };
         localStorage.setItem(AUTH_KEY, JSON.stringify(authData));
-        window.location.href = 'index.html';
+        window.location.href = './index.html';
       } else {
         // Authentification échouée
         errorMessage.textContent = 'Tu veux me copier et bah c\'est raté 😜';
