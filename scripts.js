@@ -1,7 +1,6 @@
 // Vérification d'authentification
 (function() {
   const AUTH_KEY = 'portfolio_auth';
-  const AUTH_EXPIRY = 24 * 60 * 60 * 1000; // 24 heures
   const currentPath = window.location.pathname;
   
   // Ne pas vérifier sur la page de login
@@ -9,22 +8,11 @@
     return;
   }
   
-  const authData = localStorage.getItem(AUTH_KEY);
+  const authData = sessionStorage.getItem(AUTH_KEY);
   
   if (!authData) {
     window.location.href = './login.html';
     return;
-  }
-  
-  try {
-    const { timestamp } = JSON.parse(authData);
-    if (Date.now() - timestamp >= AUTH_EXPIRY) {
-      localStorage.removeItem(AUTH_KEY);
-      window.location.href = './login.html';
-    }
-  } catch (e) {
-    localStorage.removeItem(AUTH_KEY);
-    window.location.href = './login.html';
   }
 })();
 

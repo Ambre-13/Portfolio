@@ -199,21 +199,13 @@
   <script>
     const CORRECT_PASSWORD = 'Miku.Tunisienne@13';
     const AUTH_KEY = 'portfolio_auth';
-    const AUTH_EXPIRY = 24 * 60 * 60 * 1000; // 24 heures en millisecondes
 
     // Vérifier si l'utilisateur est déjà authentifié
     function checkAuth() {
-      const authData = localStorage.getItem(AUTH_KEY);
+      const authData = sessionStorage.getItem(AUTH_KEY);
       if (authData) {
-        try {
-          const { timestamp } = JSON.parse(authData);
-          if (Date.now() - timestamp < AUTH_EXPIRY) {
-            window.location.href = './index.html';
-            return;
-          }
-        } catch (e) {
-          localStorage.removeItem(AUTH_KEY);
-        }
+        window.location.href = './index.html';
+        return;
       }
     }
 
@@ -229,11 +221,7 @@
 
       if (password === CORRECT_PASSWORD) {
         // Authentification réussie
-        const authData = {
-          timestamp: Date.now(),
-          authenticated: true
-        };
-        localStorage.setItem(AUTH_KEY, JSON.stringify(authData));
+        sessionStorage.setItem(AUTH_KEY, 'authenticated');
         window.location.href = './index.html';
       } else {
         // Authentification échouée
