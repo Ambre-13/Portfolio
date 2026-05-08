@@ -51,7 +51,7 @@ body::before {
 .site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;position:sticky;top:0;background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(155,107,255,0.15), 0 0 25px rgba(199,125,255,0.1)}
 .logo{font-weight:700;letter-spacing:1px;font-size:1.5rem;color:var(--primary);text-shadow:0 0 15px rgba(155,107,255,0.4)}
 .logo-with-icon{display:flex;align-items:center;gap:10px}
-.logo-icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:6px;border-radius:10px;background:rgba(255,255,255,0.8);border:1px solid var(--border);box-shadow:0 3px 10px rgba(155,107,255,0.2), 0 0 20px rgba(199,125,255,0.25);transition:transform .25s ease, box-shadow .25s ease}
+.logo-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:8px;border-radius:10px;background:rgba(255,255,255,0.8);border:1px solid var(--border);box-shadow:0 3px 10px rgba(155,107,255,0.2), 0 0 20px rgba(199,125,255,0.25);transition:transform .25s ease, box-shadow .25s ease}
 .logo-icon:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(155,107,255,0.35), 0 0 30px rgba(199,125,255,0.4)}
 .logo-icon svg{width:100%;height:100%}
 .icon-screen{fill:rgba(155,107,255,0.12);stroke:var(--primary);stroke-width:1.5}
@@ -110,7 +110,7 @@ body::before {
 .nav a.cta{padding:8px 12px;border-radius:8px;border:1px solid var(--border)}
 
 /* Dropdown menu styles */
-.nav{display:flex;align-items:center;gap:2.5cm}
+.nav{display:flex;align-items:center;gap:25px;flex-wrap:wrap}
 .dropdown{position:relative;display:inline-block;margin-left:0}
 .dropbtn{color:var(--primary);text-decoration:none;padding:8px 10px;border-radius:8px;transition:all .18s ease;font-weight:500}
 
@@ -194,6 +194,24 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
 
 .form-group {
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-group {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 12px;
+  }
 }
 
 .form-label {
@@ -618,6 +636,21 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .cv-futuristic {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-futuristic {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
   padding: 20px;
   align-items: stretch;
 }
@@ -1038,8 +1071,21 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
 /* Education Grid */
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .education-card {
@@ -1441,6 +1487,111 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
+}
+
+/* ========================================
+   ULTRA-MOBILE (320px et moins)
+   ======================================== */
+@media (max-width: 320px) {
+  .site-header {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .big {
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    padding: 12px 8px;
+    min-height: 60vh;
+  }
+  
+  .panel {
+    margin: 8px;
+    padding: 12px;
+  }
+  
+  .nav {
+    gap: 8px;
+  }
+  
+  .nav a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .terminal-window {
+    width: 95vw !important;
+  }
+}
+
+/* ========================================
+   PAYSAGE MOBILE (max-height: 600px)
+   ======================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 16px 28px;
+    max-height: 70vh;
+  }
+  
+  .site-header {
+    padding: 10px 15px;
+  }
+  
+  .hero-bg {
+    display: none;
+  }
+}
+
+/* ========================================
+   RESPONSIVE FINALISÉ
+   ======================================== */
+
+/* Améliorer les espacements pour all screens */
+@media (max-width: 1200px) {
+  .site-footer {
+    padding: 20px 15px;
+  }
+}
+
+/* Dropdown responsive */
+@media (max-width: 640px) {
+  .dropdown-content {
+    max-width: 85vw;
+    left: auto;
+    right: 0;
+    transform-origin: top right;
+  }
+}
+
+/* Grids responsive améliorés */
+@media (max-width: 480px) {
+  .education-grid,
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .cv-profile-card {
+    padding: 15px 10px;
+  }
+}
+
   
   .grid {
     gap: 12px;
