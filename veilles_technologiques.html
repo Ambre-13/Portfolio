@@ -41,7 +41,7 @@
       <a href="tcs.html">TCS</a>
 
       <div class="dropdown">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Projets</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
           <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
           <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="dropdown centered">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Veilles</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
           <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
           <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
@@ -67,14 +67,18 @@
       <!-- Articles de veille technologique -->
       <div style="max-width: 900px; margin: 0 auto;">
         
-        <!-- Article 1 -->
-        <div style="background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 30px; margin-bottom: 30px; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.4)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">
+           <!-- Article 1 -->
+           <div style="background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 30px; margin-bottom: 30px; transition: all 0.3s ease;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.4)"
+             data-leave-boxshadow="none"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
             <span style="color: #ff6bb8; font-size: 0.85rem; font-weight: bold;">Août 2024</span>
             <h3 style="color: #ff6bb8; margin: 0; font-size: 1.4rem;">L'Évolution de la Supervision Informatique : Des Capteurs Traditionnels à l'IA</h3>
           </div>
-          <p style="color: #aaa; line-height: 1.8; margin: 0 0 15px 0;">Cet article retrace les grandes transformations de la supervision des systèmes d'information, un domaine vital qui a dû s'adapter à la complexité croissante des réseaux d'entreprise.</p>
-          <a href="https://orsenna.fr/levolution-de-la-supervision-informatique-des-capteurs-traditionnels-a-lia/" target="_blank" style="color: #ff6bb8; text-decoration: none; font-weight: bold; margin-bottom: 15px; display: block; transition: color 0.3s ease;" onmouseover="this.style.color='#ff8bc8';" onmouseout="this.style.color='#ff6bb8';">→ Lire l'article complet</a>
+          <p style="color: #000; line-height: 1.8; margin: 0 0 15px 0;">Cet article retrace les grandes transformations de la supervision des systèmes d'information, un domaine vital qui a dû s'adapter à la complexité croissante des réseaux d'entreprise.</p>
+          <a href="https://orsenna.fr/levolution-de-la-supervision-informatique-des-capteurs-traditionnels-a-lia/" target="_blank" style="color: #ff6bb8; text-decoration: none; font-weight: bold; margin-bottom: 15px; display: block; transition: color 0.3s ease;" data-hover-color="#ff8bc8" data-leave-color="#ff6bb8">→ Lire l'article complet</a>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <span style="background: rgba(155, 107, 255, 0.15); border: 1px solid #9b6bff; color: #9b6bff; padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">IA</span>
           </div>

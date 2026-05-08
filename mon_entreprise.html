@@ -41,7 +41,7 @@
       <a href="tcs.html">TCS</a>
 
       <div class="dropdown">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Projets</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
           <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
           <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="dropdown centered">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Veilles</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
           <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
           <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
@@ -65,7 +65,11 @@
       <p class="muted" style="text-align: center; font-size: 1.2rem; margin-bottom: 50px;">Découvrez l'entreprise où j'effectue mon BTS SIO SISR</p>
       
       <!-- Carte principale de l'entreprise -->
-      <div style="max-width: 900px; margin: 0 auto 50px auto; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 20px; padding: 40px; box-shadow: 0 0 30px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 50px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.3)'; this.style.transform='translateY(0)';">
+       <div style="max-width: 900px; margin: 0 auto 50px auto; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 20px; padding: 40px; box-shadow: 0 0 30px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;"
+         data-hover-boxshadow="0 0 50px rgba(255, 107, 184, 0.5)"
+         data-leave-boxshadow="0 0 30px rgba(255, 107, 184, 0.3)"
+         data-hover-transform="translateY(-5px)"
+         data-leave-transform="translateY(0)">
         
         <!-- Nom de l'entreprise -->
         <div style="text-align: center; margin-bottom: 40px;">
@@ -76,7 +80,11 @@
         <!-- Informations principales -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px;">
           
-          <div style="background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.15)'; this.style.boxShadow='0 0 20px rgba(0, 217, 255, 0.3)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)'; this.style.boxShadow='none';">
+          <div style="background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;"
+               data-hover-background="rgba(0, 217, 255, 0.15)"
+               data-leave-background="rgba(0, 217, 255, 0.1)"
+               data-hover-boxshadow="0 0 20px rgba(0, 217, 255, 0.3)"
+               data-leave-boxshadow="none">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00d9ff" stroke-width="2" style="margin-bottom: 10px;">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -84,25 +92,33 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
             <h3 style="color: #00d9ff; margin: 0 0 5px 0; font-size: 1rem;">Effectif</h3>
-            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">140 000 employés</p>
+            <p style="color: #000; margin: 0; font-size: 1.1rem;">140 000 employés</p>
           </div>
 
-          <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.15)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.3)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)'; this.style.boxShadow='none';">
+          <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;"
+            data-hover-background="rgba(255, 107, 184, 0.15)"
+            data-leave-background="rgba(255, 107, 184, 0.1)"
+            data-hover-boxshadow="0 0 20px rgba(255, 107, 184, 0.3)"
+            data-leave-boxshadow="none">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6bb8" stroke-width="2" style="margin-bottom: 10px;">
               <circle cx="12" cy="12" r="10"/>
               <polyline points="12 6 12 12 16 14"/>
             </svg>
             <h3 style="color: #ff6bb8; margin: 0 0 5px 0; font-size: 1rem;">Création</h3>
-            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">1988</p>
+            <p style="color: #000; margin: 0; font-size: 1.1rem;">1988</p>
           </div>
 
-          <div style="background: rgba(155, 107, 255, 0.1); border: 1px solid #9b6bff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(155, 107, 255, 0.15)'; this.style.boxShadow='0 0 20px rgba(155, 107, 255, 0.3)';" onmouseout="this.style.background='rgba(155, 107, 255, 0.1)'; this.style.boxShadow='none';">
+          <div style="background: rgba(155, 107, 255, 0.1); border: 1px solid #9b6bff; border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s ease;"
+            data-hover-background="rgba(155, 107, 255, 0.15)"
+            data-leave-background="rgba(155, 107, 255, 0.1)"
+            data-hover-boxshadow="0 0 20px rgba(155, 107, 255, 0.3)"
+            data-leave-boxshadow="none">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9b6bff" stroke-width="2" style="margin-bottom: 10px;">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
             <h3 style="color: #9b6bff; margin: 0 0 5px 0; font-size: 1rem;">Localisation</h3>
-            <p style="color: #aaa; margin: 0; font-size: 1.1rem;">Marseille, France</p>
+            <p style="color: #000; margin: 0; font-size: 1.1rem;">Marseille, France</p>
           </div>
         </div>
 
@@ -115,7 +131,7 @@
             </svg>
             Présentation
           </h3>
-          <p style="color: #aaa; line-height: 1.8; margin: 0; font-size: 1rem;">
+          <p style="color: #000; line-height: 1.8; margin: 0; font-size: 1rem;">
             Orange (anciennement France Télécom) est l'un des principaux opérateurs de télécommunications dans le monde et le leader historique sur le marché français. L'entreprise fournit des services de connectivité et des solutions numériques aux particuliers, aux professionnels et aux grandes entreprises.
           </p>
         </div>
@@ -129,12 +145,12 @@
             </svg>
             Mon Rôle et Missions
           </h3>
-          <p style="color: #aaa; line-height: 1.8; margin: 0 0 15px 0; font-size: 1rem;">
+          <p style="color: #000; line-height: 1.8; margin: 0 0 15px 0; font-size: 1rem;">
             Description de  mes missions principales et les projets sur lesquels je travaille
           </p>
           
           <!-- Liste des missions -->
-          <ul style="color: #aaa; line-height: 1.8; padding-left: 20px; margin: 0;">
+          <ul style="color: #000; line-height: 1.8; padding-left: 20px; margin: 0;">
             <li style="margin-bottom: 8px;">Mission 1 : Je pilote et coordonne les interventions techniques pour les clients Grand Public et Entreprise, sur les réseaux cuivre et fibre optique.</li>
             <li style="margin-bottom: 8px;">Mission 2 : Je planifie les opérations terrain et m'assure du respect des engagements contractuels et de la satisfaction client.</li>
             <li style="margin-bottom: 8px;">Mission 3 : J'interviens sur le traitement des signalements, le suivi des cas complexes, la gestion des priorités, et le pilotage des aléas.</li>
@@ -148,11 +164,31 @@
         <h2 class="neon" style="color: #00d9ff; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Technologies et Outils Utilisés</h2>
         
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
-          <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Windows</span>
-          <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(0, 217, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Ocapi</span>
-          <span style="background: rgba(155, 107, 255, 0.15); border: 1px solid #9b6bff; border-radius: 25px; padding: 10px 20px; color: #9b6bff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(155, 107, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Oceane</span>
-          <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Fibre</span>
-          <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(0, 217, 255, 0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">Cuivre</span>
+              <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;"
+                data-hover-boxshadow="0 0 15px rgba(255, 107, 184, 0.5)"
+                data-leave-boxshadow="none"
+                data-hover-transform="translateY(-2px)"
+                data-leave-transform="translateY(0)">Windows</span>
+              <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;"
+                data-hover-boxshadow="0 0 15px rgba(0, 217, 255, 0.5)"
+                data-leave-boxshadow="none"
+                data-hover-transform="translateY(-2px)"
+                data-leave-transform="translateY(0)">Ocapi</span>
+              <span style="background: rgba(155, 107, 255, 0.15); border: 1px solid #9b6bff; border-radius: 25px; padding: 10px 20px; color: #9b6bff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;"
+                data-hover-boxshadow="0 0 15px rgba(155, 107, 255, 0.5)"
+                data-leave-boxshadow="none"
+                data-hover-transform="translateY(-2px)"
+                data-leave-transform="translateY(0)">Oceane</span>
+              <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 25px; padding: 10px 20px; color: #ff6bb8; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;"
+                data-hover-boxshadow="0 0 15px rgba(255, 107, 184, 0.5)"
+                data-leave-boxshadow="none"
+                data-hover-transform="translateY(-2px)"
+                data-leave-transform="translateY(0)">Fibre</span>
+              <span style="background: rgba(0, 217, 255, 0.15); border: 1px solid #00d9ff; border-radius: 25px; padding: 10px 20px; color: #00d9ff; font-size: 0.95rem; font-weight: bold; transition: all 0.3s ease;"
+                data-hover-boxshadow="0 0 15px rgba(0, 217, 255, 0.5)"
+                data-leave-boxshadow="none"
+                data-hover-transform="translateY(-2px)"
+                data-leave-transform="translateY(0)">Cuivre</span>
         </div>
       </div>
     </section>

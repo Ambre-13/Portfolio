@@ -41,7 +41,7 @@
       <a href="tcs.html">TCS</a>
 
       <div class="dropdown">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Projets</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
           <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
           <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="dropdown centered">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Veilles</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
           <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
           <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
@@ -74,8 +74,8 @@
           <span style="position: absolute; bottom: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌋</span>
           
           <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Architecture Réseau de l'Infrastructure S1P2</h2>
-          <p style="color: #aaa; margin-bottom: 10px; font-size: 1rem;">Bodie Ambre</p>
-          <p style="color: #aaa; margin-bottom: 30px; font-size: 1.2rem;">De la virtualisation sous Proxmox au routage avec pfSense : découvrez le déploiement de l'infrastructure S1P2.</p>
+          <p style="color: #000; margin-bottom: 10px; font-size: 1rem;">Bodie Ambre</p>
+          <p style="color: #000; margin-bottom: 30px; font-size: 1.2rem;">De la virtualisation sous Proxmox au routage avec pfSense : découvrez le déploiement de l'infrastructure S1P2.</p>
           
           <!-- Bulles de technologies -->
           <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
@@ -89,15 +89,22 @@
           </div>
           
           <div style="display: flex; justify-content: center; margin-top: 30px;">
-            <img src="Images/Schéma réseau 2.0.png" alt="Schéma d'infrastructure réseau" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 107, 184, 0.3)';">
+            <img src="Images/Schéma réseau 2.0.png" alt="Schéma d'infrastructure réseau" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 107, 184, 0.3); transition: all 0.3s ease;"
+                 data-hover-transform="scale(1.02)"
+                 data-leave-transform="scale(1)"
+                 data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.6)"
+                 data-leave-boxshadow="0 0 20px rgba(255, 107, 184, 0.3)">
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
-            <a href="#" onclick="openImageModal('Images/Schéma réseau 2.0.png'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+            <a href="#" data-open-image="Images/Schéma réseau 2.0.png" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Visualiser
             </a>
-            <a href="Images/Schéma réseau 2.0.png" download="Schema_Reseau_S1P2.png" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+            <a href="Images/Schéma réseau 2.0.png" download="Schema_Reseau_S1P2.png" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
@@ -115,7 +122,11 @@
 
       <div style="margin-top: 60px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
         <!-- Carte Procédure Active Directory -->
-        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+           <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <!-- Image placeholder -->
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="Images/Microsoft-Active-Directory-Integration.jpg" alt="Procédure Active Directory" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
@@ -123,7 +134,7 @@
           
           <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Active Directory</h3>
           
-          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
             Déploiement et configuration initiale d'un contrôleur de domaine sous Windows Server. Ce mode opératoire détaille l'installation des rôles AD DS et DNS, la promotion du serveur, ainsi que la structuration de base de l'annuaire pour centraliser la gestion des identités du réseau.
           </p>
           
@@ -137,11 +148,14 @@
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
-            <a href="#" onclick="openPdfModal('Images/Procédure AD1EX configuration (1).pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+            <a href="#" data-open-pdf="Images/Procédure AD1EX configuration (1).pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Voir
             </a>
-            <a href="Images/Procédure AD1EX configuration (1).pdf" download="Procedure_Active_Directory.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+            <a href="Images/Procédure AD1EX configuration (1).pdf" download="Procedure_Active_Directory.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
@@ -149,7 +163,11 @@
         </div>
 
         <!-- Carte Procédure 2 (Placeholder) -->
-        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+           <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <!-- Image placeholder -->
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="Images/GPO.png" alt="Procédure 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
@@ -157,7 +175,7 @@
           
           <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GPO</h3>
           
-          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
             Ce document technique détaille les étapes de configuration et de déploiement de Stratégies de Groupe (GPO) au sein d'un environnement Active Directory. Il se concentre sur l'automatisation de l'environnement de travail des utilisateurs à travers deux cas d'usage principaux : le mappage de lecteurs réseaux sécurisés et le déploiement centralisé d'un fond d'écran d'entreprise.
           </p>
           
@@ -169,11 +187,14 @@
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
-            <a href="#" onclick="openPdfModal('Images/Procédure JPO.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+            <a href="#" data-open-pdf="Images/Procédure JPO.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Voir
             </a>
-            <a href="Images/Procédure JPO.pdf" download="Procedure_JPO.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+            <a href="Images/Procédure JPO.pdf" download="Procedure_JPO.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
@@ -181,7 +202,11 @@
         </div>
 
         <!-- Carte Procédure 3 (Placeholder) -->
-        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+           <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <!-- Image placeholder -->
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="Images/Exchange.png" alt="Procédure 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
@@ -189,7 +214,7 @@
           
           <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Exchange</h3>
           
-          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
             Ce document technique détaille le processus complet d'installation, de configuration et de validation d'un serveur de messagerie Microsoft Exchange. La procédure couvre toutes les étapes critiques, depuis la préparation des prérequis sur le système Windows Server jusqu'aux tests finaux de bon fonctionnement du flux de messagerie entre les utilisateurs.
           </p>
           
@@ -202,18 +227,25 @@
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
-            <a href="#" onclick="openPdfModal('Images/Procédure exchange.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.1)';">
+            <a href="#" data-open-pdf="Images/Procédure exchange.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Voir
             </a>
-            <a href="Images/Procédure exchange.pdf" download="Procedure_Exchange.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2)';" onmouseout="this.style.background='rgba(0, 217, 255, 0.1)';">
+            <a href="Images/Procédure exchange.pdf" download="Procedure_Exchange.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
           </div>
         </div>
-        <!-- Carte Procédure 4 (Placeholder) -->
-        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+           <!-- Carte Procédure 4 (Placeholder) -->
+           <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <!-- Image placeholder -->
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="Images/GLPI.png" alt="Procédure 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
@@ -221,7 +253,7 @@
           
           <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure GLPI</h3>
           
-          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
             Ce document technique synthétise les étapes d'installation et de configuration de la solution de gestion de parc informatique GLPI sur un environnement Linux. Il retrace le déploiement depuis la préparation du serveur jusqu'au paramétrage de l'interface web
           </p>
           
@@ -232,11 +264,14 @@
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
-            <a href="#" onclick="openPdfModal('Images/Procédure GLPI.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+            <a href="#" data-open-pdf="Images/Procédure GLPI.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Voir
             </a>
-            <a href="Images/Procédure GLPI.pdf" download="Procedure_GLPI.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+            <a href="Images/Procédure GLPI.pdf" download="Procedure_GLPI.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
@@ -244,7 +279,11 @@
         </div>
 
         <!-- Carte Procédure 5 (Placeholder) -->
-        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+           <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
           <!-- Image placeholder -->
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="Images/Zabbix_logo.png" alt="Procédure 5" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
@@ -252,7 +291,7 @@
           
           <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Zabbix</h3>
           
-          <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
             Ce document technique détaille le processus complet d'installation et de configuration de la solution de supervision réseau Zabbix. Il retrace la mise en place du serveur de supervision centralisé sur un environnement Debian, ainsi que le déploiement et la configuration des agents sur une infrastructure hétérogène comprenant des serveurs Windows, Linux et un pare-feu pfSense
           </p>
           
@@ -264,11 +303,187 @@
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
-            <a href="#" onclick="openPdfModal('Images/Procédure Zabbix.pdf'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.2);'" onmouseout="this.style.background='rgba(255, 107, 184, 0.1);'">
+            <a href="#" data-open-pdf="Images/Procédure Zabbix.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)"
+              data-leave-background="rgba(255, 107, 184, 0.1)">
               <span>👁️</span>
               Voir
             </a>
-            <a href="Images/Procédure Zabbix.pdf" download="Procedure_Zabbix.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 217, 255, 0.2);'" onmouseout="this.style.background='rgba(0, 217, 255, 0.1);'">
+              <a href="Images/Procédure Zabbix.pdf" download="Procedure_Zabbix.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Nouvelle carte ajoutée après Procédure Zabbix -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Pfsense.png" alt="Procédure PfSense" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure PfSense</h3>
+
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Ce document technique présente l'installation et la configuration d'un pare-feu pfSense au sein d'un réseau virtualisé. Il couvre la mise en place des règles de filtrage, la gestion des interfaces réseau, ainsi que l'intégration de Snort pour la détection et le blocage des menaces en temps réel.
+          </p>
+
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Snort</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Pare-feu</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">IDS/IPS</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Réseau</span>
+          </div>
+
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" data-open-pdf="Images/Procédure Pfsense.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)" data-leave-background="rgba(255, 107, 184, 0.1)">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="Images/Procédure Pfsense.pdf" download="Procedure_Pfsense.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Procédure 7 -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/placeholder.png" alt="Procédure 7" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+          </p>
+          
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)" data-leave-background="rgba(255, 107, 184, 0.1)">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Procédure 8 -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/placeholder.png" alt="Procédure 8" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+          </p>
+          
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)" data-leave-background="rgba(255, 107, 184, 0.1)">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Procédure 9 -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/placeholder.png" alt="Procédure 9" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+          </p>
+          
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)" data-leave-background="rgba(255, 107, 184, 0.1)">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
+              <span>📥</span>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <!-- Procédure 10 -->
+        <div style="position: relative; background: rgba(255, 107, 184, 0.05); border: 2px solid #ff6bb8; border-radius: 15px; padding: 25px; width: 500px; text-align: center; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); display: flex; flex-direction: column;"
+             data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)"
+             data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
+             data-hover-transform="translateY(-5px)"
+             data-leave-transform="translateY(0)">
+          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/placeholder.png" alt="Procédure 10" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          </div>
+          
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          
+          <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
+            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+          </p>
+          
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+          </div>
+          
+          <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 6px; padding: 10px 20px; color: #ff6bb8; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(255, 107, 184, 0.2)" data-leave-background="rgba(255, 107, 184, 0.1)">
+              <span>👁️</span>
+              Voir
+            </a>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+              data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
             </a>
@@ -284,7 +499,8 @@
   <div id="pdfModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; justify-content: center; align-items: center;">
     <div style="position: relative; width: 90%; height: 90%; max-width: 1200px; background: #1a1a1a; border: 2px solid #ff6bb8; border-radius: 15px; box-shadow: 0 0 50px rgba(255, 107, 184, 0.5); overflow: hidden;">
       <!-- Bouton fermer -->
-      <button onclick="closePdfModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.4)'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.transform='rotate(0deg)';">
+      <button style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;"
+        data-hover-background="rgba(255, 107, 184, 0.4)" data-leave-background="rgba(255, 107, 184, 0.2)" data-hover-transform="rotate(90deg)" data-leave-transform="rotate(0deg)">
         ✕
       </button>
       
@@ -302,7 +518,8 @@
   <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; justify-content: center; align-items: center;">
     <div style="position: relative; width: 90%; height: 90%; max-width: 1400px; background: #1a1a1a; border: 2px solid #ff6bb8; border-radius: 15px; box-shadow: 0 0 50px rgba(255, 107, 184, 0.5); overflow: hidden; display: flex; flex-direction: column;">
       <!-- Bouton fermer -->
-      <button onclick="closeImageModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 184, 0.4)'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(255, 107, 184, 0.2)'; this.style.transform='rotate(0deg)';">
+      <button style="position: absolute; top: 15px; right: 15px; background: rgba(255, 107, 184, 0.2); border: 2px solid #ff6bb8; border-radius: 50%; width: 40px; height: 40px; color: #ff6bb8; font-size: 1.5rem; font-weight: bold; cursor: pointer; z-index: 10000; transition: all 0.3s ease;"
+        data-hover-background="rgba(255, 107, 184, 0.4)" data-leave-background="rgba(255, 107, 184, 0.2)" data-hover-transform="rotate(90deg)" data-leave-transform="rotate(0deg)">
         ✕
       </button>
       

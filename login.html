@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accès Portfolio — Ambre Bodie</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      margin: 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .login-container {
+      position: relative;
+      background: rgba(26, 26, 46, 0.95);
+      border: 2px solid #ff6bb8;
+      border-radius: 15px;
+      padding: 60px 50px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 0 50px rgba(255, 107, 184, 0.4), inset 0 0 30px rgba(255, 107, 184, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .login-container::before {
+      content: '⌈';
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 2rem;
+      color: #ff6bb8;
+      font-weight: bold;
+    }
+
+    .login-container::after {
+      content: '⌋';
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      font-size: 2rem;
+      color: #ff6bb8;
+      font-weight: bold;
+    }
+
+    .login-title {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #ff6bb8;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 0 20px rgba(255, 107, 184, 0.5);
+    }
+
+    .login-subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00d9ff;
+      font-size: 0.95rem;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 10px;
+      color: #ff6bb8;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid #00d9ff;
+      border-radius: 8px;
+      color: #00d9ff;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .form-input:focus {
+      outline: none;
+      background: rgba(0, 217, 255, 0.1);
+      border-color: #ff6bb8;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    }
+
+    .form-input::placeholder {
+      color: rgba(0, 217, 255, 0.5);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px 20px;
+      background: linear-gradient(90deg, #ff6bb8, #ff6bb8);
+      border: 2px solid #ff6bb8;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      font-size: 1rem;
+      font-family: 'Courier New', monospace;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 107, 184, 0.3);
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(90deg, #ff8dd3, #ff4d9f);
+      box-shadow: 0 0 30px rgba(255, 107, 184, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .error-message {
+      display: none;
+      margin-bottom: 20px;
+      padding: 12px 15px;
+      background: rgba(255, 107, 184, 0.15);
+      border: 1px solid #ff6bb8;
+      border-radius: 8px;
+      color: #ff6bb8;
+      text-align: center;
+      font-weight: bold;
+      animation: shake 0.5s ease;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    .info-text {
+      text-align: center;
+      margin-top: 30px;
+      color: rgba(0, 217, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    .info-text a {
+      color: #00d9ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-text a:hover {
+      color: #ff6bb8;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-title">🔐 ACCÈS PORTFOLIO</div>
+    <div class="login-subtitle">Ambre Bodie</div>
+    <div style="text-align: center; margin-bottom: 40px; color: #ff6bb8; font-size: 1rem; font-weight: bold;">
+      Tu veux me copier et bah c'est raté 😜
+    </div>
+
+    <form id="loginForm">
+      <div class="error-message" id="errorMessage"></div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-input" 
+          placeholder="Entrez le mot de passe" 
+          required 
+          autofocus>
+      </div>
+
+      <button type="submit" class="submit-btn">Accéder au Portfolio</button>
+    </form>
+
+    <div class="info-text">
+      © 2026 Ambre Bodie — Portfolio Privé
+    </div>
+  </div>
+
+  <script>
+    const CORRECT_PASSWORD = 'Miku.Tunisienne@13';
+    const AUTH_KEY = 'portfolio_auth';
+    const AUTH_EXPIRY = 24 * 60 * 60 * 1000; // 24 heures en millisecondes
+
+    // Vérifier si l'utilisateur est déjà authentifié
+    function checkAuth() {
+      const authData = localStorage.getItem(AUTH_KEY);
+      if (authData) {
+        try {
+          const { timestamp } = JSON.parse(authData);
+          if (Date.now() - timestamp < AUTH_EXPIRY) {
+            window.location.href = 'index.html';
+            return;
+          }
+        } catch (e) {
+          localStorage.removeItem(AUTH_KEY);
+        }
+      }
+    }
+
+    // Vérifier l'authentification au chargement
+    window.addEventListener('load', checkAuth);
+
+    // Gérer la soumission du formulaire
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const passwordInput = document.getElementById('password');
+      const errorMessage = document.getElementById('errorMessage');
+      const password = passwordInput.value;
+
+      if (password === CORRECT_PASSWORD) {
+        // Authentification réussie
+        const authData = {
+          timestamp: Date.now(),
+          authenticated: true
+        };
+        localStorage.setItem(AUTH_KEY, JSON.stringify(authData));
+        window.location.href = 'index.html';
+      } else {
+        // Authentification échouée
+        errorMessage.textContent = 'Tu veux me copier et bah c\'est raté 😜';
+        errorMessage.classList.add('show');
+        passwordInput.value = '';
+        passwordInput.focus();
+
+        // Masquer le message d'erreur après 4 secondes
+        setTimeout(() => {
+          errorMessage.classList.remove('show');
+        }, 4000);
+      }
+    });
+
+    // Gérer la touche Entrée
+    document.getElementById('password').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+      }
+    });
+  </script>
+</body>
+</html>

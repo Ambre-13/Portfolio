@@ -41,7 +41,7 @@
       <a href="tcs.html">TCS</a>
 
       <div class="dropdown">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Projets</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Projets</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Projets">
           <a href="projets_personnels.html" role="menuitem">Toute les procédures</a>
           <a href="projets_professionels.html" role="menuitem">Projet Professionnels E5</a>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="dropdown centered">
-        <a href="#" class="dropbtn" aria-haspopup="true" onclick="return false;">Veilles</a>
+        <a href="#" class="dropbtn" aria-haspopup="true" data-prevent-default="true">Veilles</a>
         <div class="dropdown-content" role="menu" aria-label="Sous-menu Veilles">
           <a href="veilles_juridiques.html" role="menuitem">Veilles juridiques</a>
           <a href="veilles_technologiques.html" role="menuitem">Veilles Technologiques</a>
@@ -85,7 +85,8 @@
       </div>
       
       <div style="display: flex; justify-content: center; margin-top: 40px;">
-          <a href="Images/tableau_compétences.pdf.pdf" download="tableau_compétences.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 107, 184, 0.15); border: 2px solid #ff6bb8; color: #ff6bb8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 0 30px rgba(255, 107, 184, 0.5), inset 0 0 20px rgba(255, 107, 184, 0.1); cursor: pointer;" onmouseover="this.style.boxShadow='0 0 50px rgba(255, 107, 184, 0.8), inset 0 0 30px rgba(255, 107, 184, 0.2)'; this.style.background='rgba(255, 107, 184, 0.25)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5), inset 0 0 20px rgba(255, 107, 184, 0.1)'; this.style.background='rgba(255, 107, 184, 0.15)'; this.style.transform='translateY(0)';">
+           <a href="Images/tableau_compétences.pdf" download="tableau_compétences.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 107, 184, 0.15); border: 2px solid #ff6bb8; color: #ff6bb8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 0 30px rgba(255, 107, 184, 0.5), inset 0 0 20px rgba(255, 107, 184, 0.1); cursor: pointer;"
+             data-hover-boxshadow="0 0 50px rgba(255, 107, 184, 0.8), inset 0 0 30px rgba(255, 107, 184, 0.2)" data-leave-boxshadow="0 0 30px rgba(255, 107, 184, 0.5), inset 0 0 20px rgba(255, 107, 184, 0.1)" data-hover-background="rgba(255, 107, 184, 0.25)" data-leave-background="rgba(255, 107, 184, 0.15)" data-hover-transform="translateY(-2px)" data-leave-transform="translateY(0)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6bb8" stroke-width="2">
                   <polyline points="8 17 12 21 16 17"/>
                   <line x1="12" y1="12" x2="12" y2="21"/>
@@ -107,10 +108,11 @@
           <div style="margin-bottom: 40px; position: relative;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div style="width: 45%; text-align: right; padding-right: 30px;">
-                <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+                 <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); cursor: pointer; transition: all 0.3s ease;"
+                   data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
                   <h3 style="color: #ff6bb8; margin: 0 0 8px 0; font-size: 1.1rem;">1ère année</h3>
-                  <p style="color: #aaa; margin: 0; font-size: 0.95rem;">2025-2026</p>
-                  <p style="color: #888; margin: 8px 0 0 0; font-size: 0.95rem;">Les bases fondamentales système et réseau</p>
+                  <p style="color: #000; margin: 0; font-size: 0.95rem;">2025-2026</p>
+                  <p style="color: #000; margin: 8px 0 0 0; font-size: 0.95rem;">Les bases fondamentales système et réseau</p>
                 </div>
               </div>
               <div style="width: 10%; display: flex; justify-content: center; z-index: 2; position: relative;">
@@ -128,10 +130,11 @@
                 <div style="width: 20px; height: 20px; border-radius: 50%; background: #ff6bb8; border: 3px solid #0a0a0a; box-shadow: 0 0 20px rgba(255, 107, 184, 0.6);"></div>
               </div>
               <div style="width: 45%; text-align: left; padding-left: 30px;">
-                <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0.2)'; this.style.transform='translateY(0)';">
+                 <div style="background: rgba(255, 107, 184, 0.1); border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(255, 107, 184, 0.2); cursor: pointer; transition: all 0.3s ease;"
+                   data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
                   <h3 style="color: #ff6bb8; margin: 0 0 8px 0; font-size: 1.1rem;">2ème Année</h3>
-                  <p style="color: #aaa; margin: 0; font-size: 0.95rem;">2026-2027</p>
-                  <p style="color: #888; margin: 8px 0 0 0; font-size: 0.95rem;">Spécialisation SISR</p>
+                  <p style="color: #000; margin: 0; font-size: 0.95rem;">2026-2027</p>
+                  <p style="color: #000; margin: 8px 0 0 0; font-size: 0.95rem;">Spécialisation SISR</p>
                 </div>
               </div>
             </div>
@@ -144,7 +147,7 @@
       <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid rgba(255, 107, 184, 0.3);">
         <h2 class="neon" style="color: #ff6bb8; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Objectifs de la Formation</h2>
         <div style="max-width: 800px; margin: 0 auto;">
-          <ul style="list-style: none; padding: 0; color: #aaa;">
+          <ul style="list-style: none; padding: 0; color: #000;">
             <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
               <span style="position: absolute; left: 0; color: #ff6bb8;">▸</span>
               Maîtrise des fondamentaux réseaux et systèmes
@@ -167,68 +170,81 @@
       <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid rgba(255, 107, 184, 0.3);">
         <h2 class="neon" style="color: #ff6bb8; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Compétences Développées</h2>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto;">
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Administration Active Directory</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+            data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Administration Active Directory</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Configuration VLAN et Switch</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Configuration VLAN et Switch</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Hyperviseur PROXMOX</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Hyperviseur PROXMOX</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Déploiement GPO Windows</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Déploiement GPO Windows</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Installation GLPI et ZABBIX</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Installation GLPI et ZABBIX</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Cisco Packet Tracer</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Cisco Packet Tracer</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Maintenance et réparation PC</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Maintenance et réparation PC</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Exchange Server</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Exchange Server</p>
           </div>
-          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0)';">
-            <p style="color: #aaa; margin: 0; font-weight: bold; font-size: 0.95rem;">Configuration WiFi D-Link</p>
+          <div style="background: transparent; border: 1px solid #ff6bb8; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+               data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
+            <p style="color: #000; margin: 0; font-weight: bold; font-size: 0.95rem;">Configuration WiFi D-Link</p>
           </div>
         </div>
       </div>
       <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid rgba(255, 107, 184, 0.3);">
         <h2 class="neon" style="color: #ff6bb8; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Certifications</h2>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; margin: 0 auto;">
-          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px);'" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0);'">
+          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+            data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
             <span style="position: absolute; top: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌈</span>
             <span style="position: absolute; top: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌉</span>
             <span style="position: absolute; bottom: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌊</span>
             <span style="position: absolute; bottom: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌋</span>
-            <p style="color: #aaa; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 CCNA 1</p>
+            <p style="color: #000; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 CCNA 1</p>
             <p style="color: #ff6666; margin: 0; font-size: 0.85rem;">en cours</p>
           </div>
-          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px);'" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0);'">
+          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+            data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
             <span style="position: absolute; top: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌈</span>
             <span style="position: absolute; top: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌉</span>
             <span style="position: absolute; bottom: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌊</span>
             <span style="position: absolute; bottom: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌋</span>
-            <p style="color: #aaa; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Computer Hardware Basics</p>
+            <p style="color: #000; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Computer Hardware Basics</p>
             <p style="color: #00ff00; margin: 0; font-size: 0.85rem;">Obtenue</p>
           </div>
-          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px);'" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0);'">
+          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+            data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
             <span style="position: absolute; top: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌈</span>
             <span style="position: absolute; top: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌉</span>
             <span style="position: absolute; bottom: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌊</span>
             <span style="position: absolute; bottom: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌋</span>
-            <p style="color: #aaa; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Network Technician Career Path</p>
+            <p style="color: #000; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Network Technician Career Path</p>
             <p style="color: #00ff00; margin: 0; font-size: 0.85rem;">Obtenue</p>
           </div>
-          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 184, 0.5)'; this.style.transform='translateY(-3px);'" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 184, 0)'; this.style.transform='translateY(0);'">
+          <div style="position: relative; background: transparent; border: none; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(255, 107, 184, 0); cursor: pointer; transition: all 0.3s ease;"
+            data-hover-boxshadow="0 0 30px rgba(255, 107, 184, 0.5)" data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0)" data-hover-transform="translateY(-3px)" data-leave-transform="translateY(0)">
             <span style="position: absolute; top: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌈</span>
             <span style="position: absolute; top: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌉</span>
             <span style="position: absolute; bottom: 5px; left: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌊</span>
             <span style="position: absolute; bottom: 5px; right: 5px; color: #ff6bb8; font-weight: bold; font-size: 1rem;">⌋</span>
-            <p style="color: #aaa; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Networking Basics</p>
+            <p style="color: #000; margin: 0 0 10px 0; font-weight: bold; font-size: 0.95rem;">🔗 Networking Basics</p>
             <p style="color: #00ff00; margin: 0; font-size: 0.85rem;">Obtenue</p>
           </div>
         </div>
