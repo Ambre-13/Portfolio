@@ -197,8 +197,17 @@
   </div>
 
   <script>
-    const CORRECT_PASSWORD = 'Miku.Tunisienne@13';
+    const CORRECT_PASSWORD_HASH = 'cfcb9ba330b554ec8d479a421ad93b49e1ad8403df30d0f3f2efda19ec7a8c71';
     const AUTH_KEY = 'portfolio_auth';
+
+    async function hashPassword(password) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      const digest = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(digest))
+        .map(byte => byte.toString(16).padStart(2, '0'))
+        .join('');
+    }
 
     // Vérifier si l'utilisateur est déjà authentifié
     function checkAuth() {
@@ -213,13 +222,14 @@
     window.addEventListener('load', checkAuth);
 
     // Gérer la soumission du formulaire
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       const passwordInput = document.getElementById('password');
       const errorMessage = document.getElementById('errorMessage');
       const password = passwordInput.value;
+      const passwordHash = await hashPassword(password);
 
-      if (password === CORRECT_PASSWORD) {
+      if (passwordHash === CORRECT_PASSWORD_HASH) {
         // Authentification réussie
         sessionStorage.setItem(AUTH_KEY, 'authenticated');
         window.location.href = './index.html';
