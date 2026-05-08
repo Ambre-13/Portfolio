@@ -907,7 +907,7 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
 
 .cv-futuristic-section.education-section {
   background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(199,125,255,0.4);
+  border: 1px solid rgba(155,107,255,0.4);
 }
 
 .cv-futuristic-section:hover {
@@ -1139,12 +1139,13 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
 
 .education-year {
   display: inline-block;
+  }
   background: rgba(155,107,255,0.18);
   color: var(--primary);
-  padding: 6px 14px;
-  border-radius: 20px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(155,107,255,0.3);
   font-size: 0.8rem;
-  font-weight: 700;
+  padding: 20px;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1152,39 +1153,38 @@ a:focus{outline:2px solid var(--primary);outline-offset:4px}
 }
 
 .education-title {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin: 0 0 8px;
-  font-weight: 600;
-  line-height: 1.4;
-}
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 
-.education-subtitle {
-  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
   color: var(--secondary);
   margin: 0 0 8px;
   font-style: italic;
-}
+  opacity: 1;
 
 .education-school {
   color: var(--text-muted);
-  margin: 0 0 5px;
-  font-size: 0.9rem;
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(155,107,255,0.3);
 }
+  background: rgba(255,255,255,0.9);
 
 .education-note {
   color: var(--secondary);
-  font-size: 0.85rem;
-  margin: 10px 0 0;
-  font-style: italic;
-}
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 4px 12px;
 
 .education-mention {
   color: var(--primary);
   font-size: 0.85rem;
   font-weight: 600;
   margin: 8px 0 0;
-}
+  border: none;
 
 /* Responsive CV Futuriste */
 @media (max-width: 1024px) {
