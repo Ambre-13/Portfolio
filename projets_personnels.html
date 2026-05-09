@@ -73,9 +73,9 @@
           <span style="position: absolute; bottom: 10px; left: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌊</span>
           <span style="position: absolute; bottom: 10px; right: 10px; color: #ff6bb8; font-weight: bold; font-size: 2rem;">⌋</span>
           
-          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Architecture Réseau de l'Infrastructure S1P2</h2>
+          <h2 style="color: #ff6bb8; font-size: 2rem; margin-bottom: 15px;">📊 Architecture Réseau de l'Infrastructure</h2>
           <p style="color: #000; margin-bottom: 10px; font-size: 1rem;">Bodie Ambre</p>
-          <p style="color: #000; margin-bottom: 30px; font-size: 1.2rem;">De la virtualisation sous Proxmox au routage avec pfSense : découvrez le déploiement de l'infrastructure S1P2.</p>
+          <p style="color: #000; margin-bottom: 30px; font-size: 1.2rem;">De la virtualisation sous Proxmox au routage avec pfSense : découvrez le déploiement de l'infrastructure.</p>
           
           <!-- Bulles de technologies -->
           <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
@@ -103,7 +103,7 @@
               <span>👁️</span>
               Visualiser
             </a>
-            <a href="Images/Schéma réseau 2.0.png" download="Schema_Reseau_S1P2.png" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
+            <a href="Images/Schéma réseau 2.0.png" download="Schema_Reseau.png" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 217, 255, 0.1); border: 1px solid #00d9ff; border-radius: 6px; padding: 10px 20px; color: #00d9ff; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease;"
               data-hover-background="rgba(0, 217, 255, 0.2)" data-leave-background="rgba(0, 217, 255, 0.1)">
               <span>📥</span>
               Télécharger
@@ -361,17 +361,21 @@
              data-hover-transform="translateY(-5px)"
              data-leave-transform="translateY(0)">
           <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="Images/placeholder.png" alt="Procédure 7" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <img src="Images/Artica.jpeg" alt="Procédure Artica" style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 10px;">
           </div>
           
-          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Artica</h3>
           
           <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
-            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+            Ce document technique présente l'installation et la configuration d'Artica, un proxy web déployé sur Debian. Il couvre la mise en place de l'inspection SSL, la création d'une liste noire pour bloquer des sites web, ainsi que le déploiement automatique de la configuration proxy et du certificat d'autorité sur les postes clients via des GPOs Active Directory.
           </p>
           
           <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Proxy</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">SSL</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Filtrage Web</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">GPO</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Active Directory</span>
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
@@ -394,18 +398,20 @@
              data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
              data-hover-transform="translateY(-5px)"
              data-leave-transform="translateY(0)">
-          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="Images/placeholder.png" alt="Procédure 8" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          <div style="width: 100%; height: 165px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/xivo logo.png" alt="Procédure Xivo" style="width: 100%; height: 100%; object-fit: contain; object-position: center; border-radius: 10px; padding: 10px;">
           </div>
           
-          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Xivo</h3>
           
           <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
-            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+            Ce document technique présente l'installation de XiVO, une solution de téléphonie sur IP (VoIP) open-source. Il détaille les étapes de déploiement du serveur via ligne de commande, permettant de mettre en place une infrastructure de communication vocale au sein d'un réseau local.
           </p>
           
           <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Téléphonie sur IP</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">VOIP</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Debian12</span>
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
@@ -428,18 +434,21 @@
              data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
              data-hover-transform="translateY(-5px)"
              data-leave-transform="translateY(0)">
-          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="Images/placeholder.png" alt="Procédure 9" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          <div style="width: 100%; height: 165px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Logo unify.png" alt="Procédure Unify" style="width: 100%; height: 100%; object-fit: contain; object-position: center; border-radius: 10px; padding: 10px;">
           </div>
           
-          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Unify</h3>
           
           <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
-            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+            Ce document technique présente la configuration d'un réseau Wi-Fi invité à l'aide d'une borne UniFi. Il couvre le paramétrage du point d'accès, la création d'un réseau isolé dédié aux visiteurs, permettant un accès à Internet sans compromettre la sécurité du réseau principal.
           </p>
           
           <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Wi-Fi</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Réseau Invité</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Sécurité Réseau</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Borne d'accès</span>
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
@@ -462,18 +471,20 @@
              data-leave-boxshadow="0 0 15px rgba(255, 107, 184, 0.2)"
              data-hover-transform="translateY(-5px)"
              data-leave-transform="translateY(0)">
-          <div style="width: 100%; height: 165px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="Images/placeholder.png" alt="Procédure 10" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          <div style="width: 100%; height: 165px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 107, 184, 0.3); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Images/Fog logo.png" alt="Procédure Fog" style="width: 100%; height: 100%; object-fit: contain; object-position: center; border-radius: 10px; padding: 10px;">
           </div>
           
-          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure (à remplir)</h3>
+          <h3 style="color: #ff6bb8; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold;">Procédure Fog</h3>
           
           <p style="color: #000; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; text-align: left; padding: 0 10px; flex-grow: 1;">
-            Contenu réservé — je remplirai cette procédure sur demande. Indiquez-moi le titre et les fichiers à associer.
+            Ce document technique présente l'installation et la configuration du serveur FOG en version classic. Il couvre la mise en place de l'infrastructure de déploiement, la capture d'une image Windows de référence, ainsi que son déploiement sur les postes clients via le réseau.
           </p>
           
           <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">À compléter</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Déploiement</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Image Windows</span>
+            <span style="background: rgba(255, 107, 184, 0.15); border: 1px solid #ff6bb8; border-radius: 20px; padding: 6px 14px; color: #ff6bb8; font-size: 0.8rem; font-weight: bold;">Clonage</span>
           </div>
           
           <div style="display: flex; gap: 15px; justify-content: center; margin-top: auto;">
@@ -525,7 +536,7 @@
       
       <!-- Titre -->
       <div style="background: rgba(255, 107, 184, 0.14); border-bottom: 2px solid #ff6bb8; padding: 16px 20px; text-align: center;">
-        <h2 style="color: #ff6bb8; margin: 0; font-size: 1.5rem;">📊 Architecture Réseau de l'Infrastructure S1P2</h2>
+        <h2 style="color: #ff6bb8; margin: 0; font-size: 1.5rem;">📊 Architecture Réseau de l'Infrastructure</h2>
       </div>
       
       <!-- Image -->
